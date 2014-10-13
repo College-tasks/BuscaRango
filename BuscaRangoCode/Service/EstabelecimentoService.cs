@@ -86,7 +86,7 @@ namespace BuscaRangoCode
                 {
 
                     // var obj = from estab in ctx.Estabelecimentos
-                    var teste = from p in ctx.BR_Estabelecimento.Include("BR_Fotos_Estabelecimento")
+                    var teste = from p in ctx.BR_Estabelecimento.Include("BR_Fotos_Estabelecimento").Include("BR_Prato")
                                 select p;
 
 
