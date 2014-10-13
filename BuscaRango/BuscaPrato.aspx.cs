@@ -95,11 +95,13 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void btnBuscar_OnClick(object sender, EventArgs e)
         {
+            /*
             LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
                 .Where(x => x.Nome.ToUpper()
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
+             */
         }
     }
 }

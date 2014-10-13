@@ -12,7 +12,7 @@
     <link href="Style/Master.css" rel="stylesheet" />
 </head>
 <body>
-    <form id="form1" runat="server" class="container">
+    <form id="form" runat="server" class="container">
         <asp:ScriptManager ID="smAJAX" runat="server"></asp:ScriptManager>
         <div class="row com-borda">
             <div class=" col-xs-3 no-margin no-padding">
