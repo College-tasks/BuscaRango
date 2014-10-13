@@ -25,14 +25,13 @@ namespace BuscaRango
                     if (prato.Sucesso && prato != null)
                     {
                         DetalhesPrato = ((BR_Prato)(prato.RetObj));
-                        lnkEstabelecimento.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
-                        lnkEstabelecimento.PostBackUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
-                        img.ImageUrl = "~/Img/Prato/" + DetalhesPrato.Imagem;
+                        hplEstab.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
+                        hplEstab.NavigateUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
+                        img.ImageUrl = "~/Images/Prato/" + DetalhesPrato.Imagem;
                         lblNome.Text = DetalhesPrato.Nome;
-                        lblDescricao.Text = DetalhesPrato.Descricao;
-                        lblDescricaoCurta.Text = DetalhesPrato.Descricao_Curta;
-                        lblPreco.Text = DetalhesPrato.Preco.ToString("C0");
-                        lblTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
+                        lblDesc.Text = DetalhesPrato.Descricao;
+                        lblPreco.Text = "R$ " + DetalhesPrato.Preco;
+                        litTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
                     }
                     else
                     {

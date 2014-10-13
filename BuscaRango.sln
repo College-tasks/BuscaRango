@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaRango", "BuscaRango\BuscaRango.csproj", "{2A21222E-6250-4133-BCB8-7DFB008546C6}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaRango", "BuscaRango\BuscaRango.csproj", "{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuscaRangoCode", "BuscaRangoCode\BuscaRangoCode.csproj", "{5AF74478-243E-4809-9A28-E2F3669E118F}"
 EndProject
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{2A21222E-6250-4133-BCB8-7DFB008546C6}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{2A21222E-6250-4133-BCB8-7DFB008546C6}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{2A21222E-6250-4133-BCB8-7DFB008546C6}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{2A21222E-6250-4133-BCB8-7DFB008546C6}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}.Release|Any CPU.Build.0 = Release|Any CPU
 		{5AF74478-243E-4809-9A28-E2F3669E118F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{5AF74478-243E-4809-9A28-E2F3669E118F}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5AF74478-243E-4809-9A28-E2F3669E118F}.Release|Any CPU.ActiveCfg = Release|Any CPU

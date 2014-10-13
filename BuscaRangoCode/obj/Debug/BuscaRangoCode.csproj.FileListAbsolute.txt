@@ -27,3 +27,13 @@ C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRangoCode\bin\Debug\EntityFr
 C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.dll
 C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.pdb
 C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.csprojResolveAssemblyReference.cache
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\BuscaRangoCode.dll.config
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\BuscaRangoCode.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\BuscaRangoCode.pdb
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.xml
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.csprojResolveAssemblyReference.cache
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.pdb

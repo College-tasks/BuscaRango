@@ -7,7 +7,7 @@
     <ProductVersion>
     </ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{2A21222E-6250-4133-BCB8-7DFB008546C6}</ProjectGuid>
+    <ProjectGuid>{E60607FA-FBD5-46DB-A685-1EE7EB0B297D}</ProjectGuid>
     <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
@@ -40,11 +40,10 @@
   <ItemGroup>
     <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BuscaRangoCode\bin\Release\EntityFramework.dll</HintPath>
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.dll</HintPath>
     </Reference>
-    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\BuscaRangoCode\bin\Release\EntityFramework.SqlServer.dll</HintPath>
+    <Reference Include="EntityFramework.SqlServer">
+      <HintPath>..\packages\EntityFramework.6.1.1\lib\net45\EntityFramework.SqlServer.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web.DynamicData" />
@@ -67,59 +66,156 @@
   <ItemGroup>
     <Content Include="BuscaEstabelecimento.aspx" />
     <Content Include="BuscaPrato.aspx" />
-    <Content Include="Content\bootstrap-theme.css" />
-    <Content Include="Content\bootstrap-theme.min.css" />
-    <Content Include="Content\bootstrap.css" />
-    <Content Include="Content\bootstrap.min.css" />
+    <Content Include="css\blog.css" />
+    <Content Include="css\font-awesome.css" />
+    <Content Include="css\Isotope.css" />
+    <Content Include="css\jquery.bxslider.css" />
+    <Content Include="css\layout.css" />
+    <Content Include="css\menu.css" />
+    <Content Include="css\owl.carousel.css" />
+    <Content Include="css\prettyPhoto.css" />
+    <Content Include="css\reset.css" />
+    <Content Include="css\responsive.css" />
+    <Content Include="css\supersized.css" />
+    <Content Include="css\supersized.shutter.css" />
     <Content Include="Default.aspx" />
     <Content Include="Global.asax" />
-    <Content Include="Icones\buscar.png" />
-    <Content Include="Icones\Estacionamento.png" />
-    <Content Include="Icones\Estacionamento2.png" />
-    <Content Include="Icones\musica.png" />
-    <Content Include="Icones\Musica2.png" />
-    <Content Include="Icones\Musica3.png" />
-    <Content Include="Icones\Pessoas.png" />
-    <Content Include="Icones\wiFi.png" />
-    <Content Include="Img\Estabelecimento\estab1.png" />
-    <Content Include="Img\Estabelecimento\estab1_t.png" />
-    <Content Include="Img\Estabelecimento\estab2.png" />
-    <Content Include="Img\Estabelecimento\estab2_t.png" />
-    <Content Include="Img\Prato\AlaMinuta.jpg" />
-    <Content Include="Img\Prato\AlaMinuta_t.jpg" />
-    <Content Include="Img\Prato\ConfitPato.jpg" />
-    <Content Include="Img\Prato\ConfitPato_t.jpg" />
-    <Content Include="Img\Prato\FilePeixe.jpg" />
-    <Content Include="Img\Prato\FilePeixe_t.jpg" />
-    <Content Include="Img\Prato\Picanha.jpg" />
-    <Content Include="Img\Prato\Picanha_t.jpg" />
-    <Content Include="Img\Prato\PratoFeito.jpg" />
-    <Content Include="Img\Prato\PratoFeito_t.jpg" />
-    <Content Include="Img\Prato\Yakissoba.jpg" />
-    <Content Include="Img\Prato\Yakissoba_t.jpg" />
-    <Content Include="packages.config" />
-    <Content Include="fonts\glyphicons-halflings-regular.woff" />
-    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="Content\bootstrap-theme.css.map" />
-    <Content Include="Content\bootstrap.css.map" />
-    <None Include="Properties\PublishProfiles\BuscaRangoFTP.pubxml" />
-    <None Include="Scripts\jquery-1.9.0.intellisense.js" />
-    <Content Include="Scripts\bootstrap.js" />
-    <Content Include="Scripts\bootstrap.min.js" />
-    <Content Include="Scripts\jquery-1.9.0.js" />
-    <Content Include="Scripts\jquery-1.9.0.min.js" />
-    <Content Include="Style\BuscaEstabelecimento.css" />
-    <Content Include="Style\BuscaPrato.css" />
-    <Content Include="Style\VerEstabelecimento.css" />
-    <Content Include="Style\Master.css" />
+    <Content Include="images\ajax-loader_dark.gif" />
+    <Content Include="images\best-restuarant.jpg" />
+    <Content Include="images\blockquote.png" />
+    <Content Include="images\blog_img01.jpg" />
+    <Content Include="images\blog_img02.jpg" />
+    <Content Include="images\bx_silderimg02.jpg" />
+    <Content Include="images\bx_silderimg03.jpg" />
+    <Content Include="images\bx_silderimg04.jpg" />
+    <Content Include="images\comment-img.jpeg" />
+    <Content Include="images\content_opc_bg.png" />
+    <Content Include="images\ds-img-1.jpg" />
+    <Content Include="images\ds-img-2.jpg" />
+    <Content Include="images\ds-img-3.jpg" />
+    <Content Include="images\ds-img-4.jpg" />
+    <Content Include="images\ds-img-5.jpg" />
+    <Content Include="images\ds-img-6.jpg" />
+    <Content Include="images\ds-img-7.jpg" />
+    <Content Include="images\Estabelecimento\bocao.jpg" />
+    <Content Include="images\Estabelecimento\bocao_t.jpg" />
+    <Content Include="images\Estabelecimento\estab1.png" />
+    <Content Include="images\Estabelecimento\estab1_t.png" />
+    <Content Include="images\Estabelecimento\estab2.png" />
+    <Content Include="images\Estabelecimento\estab2_t.png" />
+    <Content Include="images\Estabelecimento\Miro.jpg" />
+    <Content Include="images\Estabelecimento\Miro_t.jpg" />
+    <Content Include="images\Estabelecimento\tialaura.jpg" />
+    <Content Include="images\Estabelecimento\tialaura_t.jpg" />
+    <Content Include="images\food_icon01.jpg" />
+    <Content Include="images\food_icon02.jpg" />
+    <Content Include="images\food_icon03.jpg" />
+    <Content Include="images\food_icon04.jpg" />
+    <Content Include="images\food_icon05.jpg" />
+    <Content Include="images\food_icon06.jpg" />
+    <Content Include="images\food_icon07.jpg" />
+    <Content Include="images\food_icon08.jpg" />
+    <Content Include="images\food_icon09.jpg" />
+    <Content Include="images\food_icon10.jpg" />
+    <Content Include="images\food_icon11.jpg" />
+    <Content Include="images\food_icon12.jpg" />
+    <Content Include="images\food_icon13.jpg" />
+    <Content Include="images\food_icon14.jpg" />
+    <Content Include="images\food_icon15.jpg" />
+    <Content Include="images\food_icon16.jpg" />
+    <Content Include="images\food_icon17.jpg" />
+    <Content Include="images\food_icon18.jpg" />
+    <Content Include="images\food_icon19.jpg" />
+    <Content Include="images\food_icon20.jpg" />
+    <Content Include="images\icon-img-1.jpg" />
+    <Content Include="images\icon-img-10.jpg" />
+    <Content Include="images\icon-img-11.jpg" />
+    <Content Include="images\icon-img-12.jpg" />
+    <Content Include="images\icon-img-2.jpg" />
+    <Content Include="images\icon-img-3.jpg" />
+    <Content Include="images\icon-img-4.jpg" />
+    <Content Include="images\icon-img-5.jpg" />
+    <Content Include="images\icon-img-6.jpg" />
+    <Content Include="images\icon-img-7.jpg" />
+    <Content Include="images\icon-img-8.jpg" />
+    <Content Include="images\icon-img-9.jpg" />
+    <Content Include="images\image.png" />
+    <Content Include="images\link_post.png" />
+    <Content Include="images\list_arrow.png" />
+    <Content Include="images\menu_bg.png" />
+    <Content Include="images\Prato\AlaMinuta.jpg" />
+    <Content Include="images\Prato\AlaMinuta_t.jpg" />
+    <Content Include="images\Prato\ConfitPato.jpg" />
+    <Content Include="images\Prato\ConfitPato_t.jpg" />
+    <Content Include="images\Prato\FilePeixe.jpg" />
+    <Content Include="images\Prato\FilePeixe_t.jpg" />
+    <Content Include="images\Prato\Picanha.jpg" />
+    <Content Include="images\Prato\Picanha_t.jpg" />
+    <Content Include="images\Prato\PratoFeito.jpg" />
+    <Content Include="images\Prato\PratoFeito_t.jpg" />
+    <Content Include="images\Prato\Yakissoba.jpg" />
+    <Content Include="images\Prato\Yakissoba_t.jpg" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\contentPattern.png" />
+    <Content Include="images\prettyPhoto\dark_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\dark_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\dark_square\loader.gif" />
+    <Content Include="images\prettyPhoto\dark_square\sprite.png" />
+    <Content Include="images\prettyPhoto\default\default_thumb.png" />
+    <Content Include="images\prettyPhoto\default\loader.gif" />
+    <Content Include="images\prettyPhoto\default\sprite.png" />
+    <Content Include="images\prettyPhoto\default\sprite_next.png" />
+    <Content Include="images\prettyPhoto\default\sprite_prev.png" />
+    <Content Include="images\prettyPhoto\default\sprite_x.png" />
+    <Content Include="images\prettyPhoto\default\sprite_y.png" />
+    <Content Include="images\prettyPhoto\facebook\btnNext.png" />
+    <Content Include="images\prettyPhoto\facebook\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternBottom.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternLeft.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternRight.png" />
+    <Content Include="images\prettyPhoto\facebook\contentPatternTop.png" />
+    <Content Include="images\prettyPhoto\facebook\default_thumbnail.gif" />
+    <Content Include="images\prettyPhoto\facebook\loader.gif" />
+    <Content Include="images\prettyPhoto\facebook\sprite.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_rounded\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_rounded\loader.gif" />
+    <Content Include="images\prettyPhoto\light_rounded\sprite.png" />
+    <Content Include="images\prettyPhoto\light_square\btnNext.png" />
+    <Content Include="images\prettyPhoto\light_square\btnPrevious.png" />
+    <Content Include="images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="images\slider-img-1.jpg" />
+    <Content Include="images\slider-img-2.jpg" />
+    <Content Include="images\slider-img-3.jpg" />
+    <Content Include="images\slider-img-4.jpg" />
+    <Content Include="images\social-icons\facebook.png" />
+    <Content Include="images\social-icons\pinrest.png" />
+    <Content Include="images\social-icons\skype.png" />
+    <Content Include="images\social-icons\stumbleupon.png" />
+    <Content Include="images\social-icons\twitter.png" />
+    <Content Include="images\team01.jpg" />
+    <Content Include="images\team02.jpg" />
+    <Content Include="images\team03.jpg" />
+    <Content Include="images\top-opc.png" />
+    <Content Include="images\video-icon.png" />
+    <Content Include="js\contact.js" />
+    <Content Include="js\custom.js" />
+    <Content Include="js\jquery.bxslider.js" />
+    <Content Include="js\jquery.easing.min.js" />
+    <Content Include="js\jquery.isotope.min.js" />
+    <Content Include="js\jquery.js" />
+    <Content Include="js\jquery.prettyPhoto.js" />
+    <Content Include="js\owl.carousel.js" />
+    <Content Include="js\superized-custom.js" />
+    <Content Include="js\supersized.3.2.7.js" />
+    <Content Include="js\supersized.shutter.js" />
+    <Content Include="style.css" />
     <Content Include="VerEstabelecimento.aspx" />
     <Content Include="VerPrato.aspx" />
-    <Content Include="Web.config">
-      <SubType>Designer</SubType>
-    </Content>
-    <Content Include="Scripts\jquery-1.9.0.min.map" />
+    <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BuscaEstabelecimento.aspx.cs">
@@ -170,6 +266,21 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.eot%40" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfontba72.svg" />
+    <Content Include="images\Descr.WD3" />
+    <Content Include="images\prettyPhoto\dark_rounded\Descr.WD3" />
+    <Content Include="images\prettyPhoto\dark_square\Descr.WD3" />
+    <Content Include="images\prettyPhoto\default\Descr.WD3" />
+    <Content Include="images\prettyPhoto\facebook\Descr.WD3" />
+    <Content Include="images\prettyPhoto\light_rounded\Descr.WD3" />
+    <Content Include="images\prettyPhoto\light_square\Descr.WD3" />
+    <Content Include="images\social-icons\Descr.WD3" />
+    <Content Include="packages.config" />
     <Content Include="Principal.Master" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -184,7 +295,6 @@
       <Name>BuscaRangoCode</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
@@ -200,7 +310,7 @@
           <AutoAssignPort>True</AutoAssignPort>
           <DevelopmentServerPort>0</DevelopmentServerPort>
           <DevelopmentServerVPath>/</DevelopmentServerVPath>
-          <IISUrl>http://localhost:9436/</IISUrl>
+          <IISUrl>http://localhost:14202/</IISUrl>
           <NTLMAuthentication>False</NTLMAuthentication>
           <UseCustomServer>False</UseCustomServer>
           <CustomServerUrl>

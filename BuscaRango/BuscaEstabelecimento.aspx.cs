@@ -1,10 +1,10 @@
-﻿using System;
+﻿using BuscaRangoCode;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.UI;
 using System.Web.UI.WebControls;
-using BuscaRangoCode;
 
 namespace BuscaRango
 {
@@ -47,9 +47,11 @@ namespace BuscaRango
         /// <param name="btn"></param>
         private void MudaCorBotao(string btn)
         {
+            /*
             MasterPage master = this.Master;
             Button home = (Button)master.FindControl(btn);
             home.CssClass = home.CssClass + " btn-danger";
+             */
         }
 
         /// <summary>
@@ -63,24 +65,25 @@ namespace BuscaRango
             {
                 BR_Estabelecimento estab = (BR_Estabelecimento)e.Item.DataItem;
                 Label nome = (Label)e.Item.FindControl("lblNome");
-                Label descricao = (Label)e.Item.FindControl("lblDescricao");
-                Label categoria = (Label)e.Item.FindControl("lblCategoria");
+                HyperLink descricao = (HyperLink)e.Item.FindControl("hplDesc");
+                HyperLink estabelecimento = (HyperLink)e.Item.FindControl("hplEstab");
                 Label endereco = (Label)e.Item.FindControl("lblEndereco");
                 Label nota = (Label)e.Item.FindControl("lblNota");
                 Image img = (Image)e.Item.FindControl("img");
+                Label qtd = (Label)e.Item.FindControl("lblQtd");
 
                 if (estab.BR_Fotos_Estabelecimento.Count > 0)
                 {
-                    img.ImageUrl = "~/Img/Estabelecimento/" + estab.BR_Fotos_Estabelecimento.FirstOrDefault().Imagem.ToUpper().Replace(".JPG", "_T.JPG").Replace(".PNG", "_T.PNG");
+                    img.ImageUrl = "~/Images/Estabelecimento/" + estab.BR_Fotos_Estabelecimento.FirstOrDefault().Imagem;
                 }
-                
-                /*
-                nome.Text = estab.Nome;
-                descricao.Text = estab.DescricaoCurta;
-                categoria.Text = estab.Categoria;
-                nota.Text = "Nota: " + estab.Nota;
-                img.ImageUrl = "~/Img/Estabelecimento/" + estab.Imagem;
-                */
+
+                nome.Text = estab.Razao_Social;
+                //preco.Text = "R$ " + prato.Preco;
+                descricao.NavigateUrl = "~/VerEstabelecimento/" + estab.Id;
+                //estabelecimento.Text = prato.BR_Estabelecimento.Razao_Social;
+                estabelecimento.NavigateUrl = "~/VerEstabelecimento/" + estab.Id;
+                //descricao.Text = prato.Descricao;
+                qtd.Text = "Pratos:" + estab.BR_Prato.Count;
             }
         }
 
@@ -96,10 +99,12 @@ namespace BuscaRango
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
+            /*
             lstEstabelecimentosFiltrados = new List<BR_Estabelecimento>();
             lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)
             Session["DataE"]).Where(x => x.Razao_Social.ToUpper().Contains(txtBusca.Text.ToUpper())).ToList();
             CarregaEstabelecimentos();
+             */
         }
     }
 }

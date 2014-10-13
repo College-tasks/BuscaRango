@@ -1,31 +1,22 @@
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\BuscaRango.dll
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\BuscaRango.pdb
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.dll
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.xml
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
-C:\Users\SimorWork\Dropbox\VS\Projetos\VS\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\BuscaRango.dll
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\BuscaRango.pdb
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\EntityFramework.dll
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\EntityFramework.xml
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.dll
-C:\Users\SimorWork\Desktop\Temp\VS\BuscaRango (2)\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.xml
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRango.dll
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRango.pdb
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.dll
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.dll
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.xml
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.xml
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
-C:\Users\SimorWork\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\BuscaRango.dll
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\BuscaRango.pdb
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\EntityFramework.dll
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\EntityFramework.xml
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.dll
+C:\Users\SimorWork\Documents\BitBucket\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.xml
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\BuscaRango.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\BuscaRango.pdb
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.xml
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.xml
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb

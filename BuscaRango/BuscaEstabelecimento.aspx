@@ -1,56 +1,42 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="BuscaEstabelecimento.aspx.cs" Inherits="BuscaRango.BuscaEstabelecimento" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
-    <title>Busca Rango | Busca de estabelecimento</title>
-    <link href="Style/BuscaEstabelecimento.css" rel="stylesheet" />
+    <title>Busca Rango | Busca de Estabelecimentos</title>
+    <link rel="stylesheet" type="text/css" href="css/Isotope.css" />
+    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
-    <asp:UpdatePanel ID="upContent" runat="server">
+    <asp:UpdatePanel ID="upBusca" runat="server">
         <ContentTemplate>
-            <!-- Filtros -->
-            <div class="row com-borda sem-borda-top">
-                <div class="col-xs-8 no-margin no-padding">
-                    <asp:TextBox ID="txtBusca" runat="server" CssClass="form-control btn-100" placeholder="Pesquisar"></asp:TextBox>
-                </div>
-                <div class="col-xs-2 no-margin no-padding">
-                    <asp:Button ID="btnBuscar" runat="server" Text="Buscar" OnClick="btnBuscar_Click" CssClass="btn btn-default btn-100" />
-                </div>
-                <div class="col-xs-2 no-margin no-padding">
-                    <asp:Button ID="btnFiltrar" runat="server" Text="+ Filtros" CssClass="btn btn-default btn-100" />
-                </div>
-            </div>
-            <!-- Dados -->
-            <asp:Repeater ID="rptDados" runat="server" OnItemDataBound="rptDados_ItemDataBound">
-                <ItemTemplate>
-                    <div class="row com-borda">
-                        <div class="col-xs-2 col-img">
-                            <asp:Image ID="img" runat="server" Height="100" />
-                        </div>
-                        <div class="col-xs-10">
-                            <div class="row row-info">
-                                <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
-                                <div>
-                                    <asp:HyperLink ID="HyperLink1" Text='<%# string.Format(DataBinder.Eval(Container.DataItem, "Razao_Social").ToString()) %>'
-                                        NavigateUrl='<%# string.Format("~/VerEstabelecimento/{0}", DataBinder.Eval(Container.DataItem, "ID").ToString()) %>'
-                                        runat="server" />
-                                </div>
-                            </div>
-                            <div class="row row-info">
-                                <asp:Label ID="lblDescricao" runat="server" Text="Email:"></asp:Label>
-                                <%# DataBinder.Eval(Container.DataItem,"Email") %>
-                            </div>
-                            <div class="row row-info">
-                                <asp:Label ID="lblCategoria" runat="server" Text="Telefone:"></asp:Label>
-                                <%# DataBinder.Eval(Container.DataItem, "Tel_Contato")%>
-                            </div>
-                            <div class="row row-info">
-                                <asp:Label ID="lblEndereco" runat="server" Text="Endereço:"></asp:Label>
-                                <%# DataBinder.Eval(Container.DataItem,"Endereco") %>
-                            </div>
-                        </div>
-                    </div>
-                </ItemTemplate>
-            </asp:Repeater>
+            <!--Container Start-->
+            <section id="container-fluid">
+                <section id="container">
+                    <!--food menu start..-->
+                    <ul class="portfolio_items isotope-container clearfix portfolio-page-template gallery">
+                        <!-- Dados -->
+                        <asp:Repeater ID="rptDados" runat="server" OnItemDataBound="rptDados_ItemDataBound">
+                            <ItemTemplate>
+                                <li class="isotope-item all illustration">
+                                    <div class="item-container">
+                                        <asp:Image ID="img" runat="server" />
+                                        <asp:Label ID="lblQtd" runat="server" Text="" CssClass="item_price"></asp:Label>
+                                        <asp:HyperLink ID="hplDesc" runat="server" CssClass="link_to_image"></asp:HyperLink>
+                                        <asp:HyperLink ID="hplEstab" runat="server" CssClass="link_to_post"></asp:HyperLink>
+                                    </div>
+                                    <div class="portfolio_post_content">
+                                        <h4>
+                                            <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
+                                        </h4>
+                                    </div>
+                                </li>
+                            </ItemTemplate>
+                        </asp:Repeater>
+                    </ul>
+                    <!--food menu end..-->
+                </section>
+            </section>
+            <!--Container End-->
         </ContentTemplate>
     </asp:UpdatePanel>
 </asp:Content>

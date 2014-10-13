@@ -31,33 +31,6 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// lnkEstabelecimento control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.LinkButton lnkEstabelecimento;
-        
-        /// <summary>
-        /// lblDescricao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescricao;
-        
-        /// <summary>
-        /// lblDescricaoCurta control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescricaoCurta;
-        
-        /// <summary>
         /// lblPreco control.
         /// </summary>
         /// <remarks>
@@ -67,12 +40,30 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Label lblPreco;
         
         /// <summary>
-        /// lblTeleEntrega control.
+        /// hplEstab control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTeleEntrega;
+        protected global::System.Web.UI.WebControls.HyperLink hplEstab;
+        
+        /// <summary>
+        /// lblDesc control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblDesc;
+        
+        /// <summary>
+        /// litTeleEntrega control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Literal litTeleEntrega;
     }
 }
