@@ -26,6 +26,7 @@
     <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Viga' />
 </head>
 <body>
+<<<<<<< HEAD
     <form id="form1" runat="server">
         <!--<asp:ScriptReference Path="~/js/superized-custom.js" />-->
         <asp:ScriptManager ID="smBR" runat="server">
@@ -43,6 +44,22 @@
         <div id="controls-wrapper" class="load-item">
             <div id="controls">
                 <ul id="slide-list"></ul>
+=======
+    <form id="form" runat="server" class="container">
+        <asp:ScriptManager ID="smAJAX" runat="server"></asp:ScriptManager>
+        <div class="row com-borda">
+            <div class=" col-xs-3 no-margin no-padding">
+                <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-default btn-100" OnClick="btnHome_Click" />
+            </div>
+            <div class=" col-xs-3 no-margin no-padding">
+                <asp:Button ID="btnPrato" runat="server" Text="Pratos" CssClass="btn btn-default btn-100" OnClick="btnPrato_Click" />
+            </div>
+            <div class=" col-xs-3 no-margin no-padding">
+                <asp:Button ID="btnLugar" runat="server" Text="Lugares" CssClass="btn btn-default btn-100" OnClick="btnLugar_Click" />
+            </div>
+            <div class=" col-xs-3 no-margin no-padding">
+                <asp:Button ID="btnConfig" runat="server" Text="Configuração" CssClass="btn btn-default btn-100" OnClick="btnConfig_Click" />
+>>>>>>> bf16a3fe2ece3a142d8e84b6ac839cc2c04439f4
             </div>
         </div>
         <!--Control Bar End-->
