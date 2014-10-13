@@ -13,6 +13,15 @@ namespace BuscaRango {
     public partial class BuscaEstabelecimento {
         
         /// <summary>
+        /// upBusca control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel upBusca;
+        
+        /// <summary>
         /// rptDados control.
         /// </summary>
         /// <remarks>

@@ -71,12 +71,12 @@ namespace BuscaRango
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                BR_Prato prato = (BR_Prato)e.Item.DataItem;
-                Label nome = (Label)e.Item.FindControl("lblNome");
-                HyperLink estabelecimento = (HyperLink)e.Item.FindControl("hplEstab");
-                HyperLink descricao = (HyperLink)e.Item.FindControl("hplDesc");
-                Label preco = (Label)e.Item.FindControl("lblPreco");
-                Image img = (Image)e.Item.FindControl("img");
+                var prato = (BR_Prato)e.Item.DataItem;
+                var nome = (Label)e.Item.FindControl("lblNome");
+                var estabelecimento = (HyperLink)e.Item.FindControl("hplEstab");
+                var descricao = (HyperLink)e.Item.FindControl("hplDesc");
+                var preco = (Label)e.Item.FindControl("lblPreco");
+                var img = (Image)e.Item.FindControl("img");
 
                 nome.Text = prato.Nome;
                 preco.Text = "R$ " + prato.Preco;
@@ -96,13 +96,49 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void btnBuscar_OnClick(object sender, EventArgs e)
         {
-            /*
             LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
                 .Where(x => x.Nome.ToUpper()
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
-             */
+        }
+
+        protected void btnBuscaAvancada_OnClick(object sender, EventArgs e)
+        {
+            var precoInicial = txtPrecoDe.Text.Equals("") ? 0 : double.Parse(txtPrecoDe.Text);
+            var precoFinal = txtPrecoAte.Text.Equals("") ? 0 : double.Parse(txtPrecoAte.Text);
+
+            LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]);
+
+            if (txtBuscaNome.Text != "")
+            {
+                LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Nome.ToUpper()
+                        .Contains(txtBuscaNome.Text.ToUpper()))
+                    .ToList();
+            }
+
+            if (txtBuscaDescricao.Text != "")
+            {
+                LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Descricao.ToUpper()
+                        .Contains(txtBuscaDescricao.Text.ToUpper()))
+                    .ToList();
+            }
+
+            if (!((precoInicial.Equals(0)) && (precoFinal.Equals(0))))
+            {
+                LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Preco >= precoInicial
+                        && x.Preco <= precoFinal)
+                    .ToList();
+            }
+
+            LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Tem_Entrega == chkEntrega.Checked)
+                    .ToList();
+            CarregaPratosFiltrados();
+
         }
     }
 }

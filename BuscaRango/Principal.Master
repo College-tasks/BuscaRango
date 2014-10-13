@@ -34,7 +34,6 @@
                 <asp:ScriptReference Path="~/js/jquery.easing.min.js" />
                 <asp:ScriptReference Path="~/js/supersized.3.2.7.js" />
                 <asp:ScriptReference Path="~/js/supersized.shutter.js" />
-                
                 <asp:ScriptReference Path="~/js/jquery.bxslider.js" />
                 <asp:ScriptReference Path="~/js/custom.js" />
             </Scripts>
