@@ -26,8 +26,7 @@
     <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Viga' />
 </head>
 <body>
-<<<<<<< HEAD
-    <form id="form1" runat="server">
+        <form id="form1" runat="server">
         <!--<asp:ScriptReference Path="~/js/superized-custom.js" />-->
         <asp:ScriptManager ID="smBR" runat="server">
             <Scripts>
@@ -44,29 +43,13 @@
         <div id="controls-wrapper" class="load-item">
             <div id="controls">
                 <ul id="slide-list"></ul>
-=======
-    <form id="form" runat="server" class="container">
-        <asp:ScriptManager ID="smAJAX" runat="server"></asp:ScriptManager>
-        <div class="row com-borda">
-            <div class=" col-xs-3 no-margin no-padding">
-                <asp:Button ID="btnHome" runat="server" Text="Home" CssClass="btn btn-default btn-100" OnClick="btnHome_Click" />
-            </div>
-            <div class=" col-xs-3 no-margin no-padding">
-                <asp:Button ID="btnPrato" runat="server" Text="Pratos" CssClass="btn btn-default btn-100" OnClick="btnPrato_Click" />
-            </div>
-            <div class=" col-xs-3 no-margin no-padding">
-                <asp:Button ID="btnLugar" runat="server" Text="Lugares" CssClass="btn btn-default btn-100" OnClick="btnLugar_Click" />
-            </div>
-            <div class=" col-xs-3 no-margin no-padding">
-                <asp:Button ID="btnConfig" runat="server" Text="Configuração" CssClass="btn btn-default btn-100" OnClick="btnConfig_Click" />
->>>>>>> bf16a3fe2ece3a142d8e84b6ac839cc2c04439f4
             </div>
         </div>
         <!--Control Bar End-->
 
         <!--Logo Start-->
         <section id="logo">
-            <asp:HyperLink runat="server" NavigateUrl="~/Home">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home">
                 <h1>Busca Rango</h1>
             </asp:HyperLink>
         </section>
@@ -76,7 +59,7 @@
         <nav class="menu nav_wrapper" id="myslidemenu">
             <ul class="menu" id="jqueryslidemenu">
                 <li class="current">
-                    <asp:HyperLink runat="server" NavigateUrl="~/Home">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Home">
                         <i class="fa fa-home"></i>Home
                     </asp:HyperLink>
                 </li>
@@ -84,9 +67,9 @@
                     <i class="fa fa-cutlery"></i>Buscar</a>
                     <ul class="sub-menu">
                         <li>
-                            <asp:HyperLink runat="server" NavigateUrl="~/Lugar">Estabelecimentos</asp:HyperLink></li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Lugar">Estabelecimentos</asp:HyperLink></li>
                         <li>
-                            <asp:HyperLink runat="server" NavigateUrl="~/Prato">Pratos</asp:HyperLink></li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Prato">Pratos</asp:HyperLink></li>
                     </ul>
                 </li>
             </ul>
@@ -114,47 +97,48 @@
             $.supersized({
 
                 // Functionality
-                slideshow: 1,			// Slideshow on/off
-                autoplay: 1,			// Slideshow starts playing automatically
-                start_slide: 1,			// Start slide (0 is random)
-                stop_loop: 0,			// Pauses slideshow on last slide
-                random: 0,			// Randomize slide order (Ignores start slide)
-                slide_interval: 3000,		// Length between transitions
-                transition: 1, 			// 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
-                transition_speed: 1000,		// Speed of transition
-                new_window: 1,			// Image links open in new window/tab
-                pause_hover: 0,			// Pause slideshow on hover
-                keyboard_nav: 1,			// Keyboard navigation on/off
-                performance: 1,			// 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
-                image_protect: 1,			// Disables image dragging and right click with Javascript
+                slideshow: 1,            // Slideshow on/off
+                autoplay: 1,            // Slideshow starts playing automatically
+                start_slide: 1,            // Start slide (0 is random)
+                stop_loop: 0,            // Pauses slideshow on last slide
+                random: 0,            // Randomize slide order (Ignores start slide)
+                slide_interval: 3000,        // Length between transitions
+                transition: 1,             // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                transition_speed: 1000,        // Speed of transition
+                new_window: 1,            // Image links open in new window/tab
+                pause_hover: 0,            // Pause slideshow on hover
+                keyboard_nav: 1,            // Keyboard navigation on/off
+                performance: 1,            // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+                image_protect: 1,            // Disables image dragging and right click with Javascript
 
-                // Size & Position						   
-                min_width: 0,			// Min width allowed (in pixels)
-                min_height: 0,			// Min height allowed (in pixels)
-                vertical_center: 1,			// Vertically center background
-                horizontal_center: 1,			// Horizontally center background
-                fit_always: 0,			// Image will never exceed browser width or height (Ignores min. dimensions)
-                fit_portrait: 1,			// Portrait images will not exceed browser height
-                fit_landscape: 0,			// Landscape images will not exceed browser width
+                // Size & Position                           
+                min_width: 0,            // Min width allowed (in pixels)
+                min_height: 0,            // Min height allowed (in pixels)
+                vertical_center: 1,            // Vertically center background
+                horizontal_center: 1,            // Horizontally center background
+                fit_always: 0,            // Image will never exceed browser width or height (Ignores min. dimensions)
+                fit_portrait: 1,            // Portrait images will not exceed browser height
+                fit_landscape: 0,            // Landscape images will not exceed browser width
 
-                // Components							
-                slide_links: 'blank',	// Individual links for each slide (Options: false, 'num', 'name', 'blank')
-                thumb_links: 1,			// Individual thumb links for each slide
-                thumbnail_navigation: 0,			// Thumbnail navigation
-                slides: [			// Slideshow Images
+                // Components                            
+                slide_links: 'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+                thumb_links: 1,            // Individual thumb links for each slide
+                thumbnail_navigation: 0,            // Thumbnail navigation
+                slides: [            // Slideshow Images
                                                     { image: '/images/slider-img-1.jpg', title: 'Image Credit 1: Maria Kazvan' },
                                                     { image: '/images/slider-img-2.jpg', title: 'Image Credit 2: Maria Kazvan' },
                                                     { image: '/images/slider-img-3.jpg', title: 'Image Credit 3: Maria Kazvan' },
                                                     { image: '/images/slider-img-4.jpg', title: 'Image Credit 4: Maria Kazvan' }
                 ],
 
-                // Theme Options			   
-                progress_bar: 1,			// Timer for each slide							
+                // Theme Options               
+                progress_bar: 1,            // Timer for each slide                            
                 mouse_scrub: 0
 
             });
 
         });
     </script>
+
 </body>
 </html>

@@ -39,10 +39,6 @@ namespace BuscaRango
                     }
                 }
             }
-            else
-            {
-                Response.Redirect("~/Prato");
-            }
         }
     }
 }

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace BuscaRangoCode
 {
@@ -146,7 +147,7 @@ namespace BuscaRangoCode
                 try
                 {
                     // Recebe o primeiro objeto da lista de Entidades que possui a expressão especificada
-                    var obj = ctx.BR_Estabelecimento.Include("BR_Prato").FirstOrDefault(x => x.Id == id);
+                    var obj = ctx.BR_Estabelecimento.Include(x => x.BR_Prato).Include(x => x.BR_Fotos_Estabelecimento).FirstOrDefault(x => x.Id == id);
                     ret.RetObj = obj;
                 }
                 catch (Exception ex)

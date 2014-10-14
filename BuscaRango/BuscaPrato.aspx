@@ -7,7 +7,6 @@
 
     <asp:UpdatePanel ID="upBusca" runat="server">
         <ContentTemplate>
-
             <!--Container Start-->
             <section id="container-fluid">
                 <section id="container">
@@ -67,13 +66,11 @@
                                 </li>
                             </ItemTemplate>
                         </asp:Repeater>
-
                     </ul>
                     <!--food menu end..-->
                 </section>
             </section>
             <!--Container End-->
-
         </ContentTemplate>
     </asp:UpdatePanel>
     <!--<Triggers>
