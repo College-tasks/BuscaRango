@@ -99,12 +99,50 @@ namespace BuscaRango
 
         protected void btnBuscar_Click(object sender, EventArgs e)
         {
-            /*
+
             lstEstabelecimentosFiltrados = new List<BR_Estabelecimento>();
             lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)
             Session["DataE"]).Where(x => x.Razao_Social.ToUpper().Contains(txtBusca.Text.ToUpper())).ToList();
             CarregaEstabelecimentos();
-             */
+
+        }
+
+        protected void btnBuscaAvancada_OnClick(object sender, EventArgs e)
+        {
+
+            lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)Session["Data"]);
+
+            if (txtBuscaNome.Text != "")
+            {
+                lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
+                    .Where(x => x.Razao_Social.ToUpper()
+                        .Contains(txtBuscaNome.Text.ToUpper()))
+                    .ToList();
+            }
+
+            if (txtBuscaDescricao.Text != "")
+            {
+                lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
+                    .Where(x => x.Descricao.ToUpper()
+                        .Contains(txtBuscaDescricao.Text.ToUpper()))
+                    .ToList();
+            }
+
+            if (txtEndereco.Text != "")
+            {
+
+                lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
+                    .Where(x => x.Endereco.ToUpper()
+                        .Contains(txtEndereco.Text.ToUpper()))
+                        .ToList();
+            }
+
+            //lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
+            //    .Where(x => x.Tel_Entrega == (chkEntrega.Checked == true? true: false))
+            //        .ToList();
+
+            CarregaEstabelecimentos();
+
         }
     }
 }
