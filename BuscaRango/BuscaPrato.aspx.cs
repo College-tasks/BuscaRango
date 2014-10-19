@@ -112,14 +112,6 @@ namespace BuscaRango
 
             LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]);
 
-            if (txtBuscaNome.Text != "")
-            {
-                LstPratosFiltrados = LstPratosFiltrados
-                    .Where(x => x.Nome.ToUpper()
-                        .Contains(txtBuscaNome.Text.ToUpper()))
-                    .ToList();
-            }
-
             if (txtBuscaDescricao.Text != "")
             {
                 LstPratosFiltrados = LstPratosFiltrados

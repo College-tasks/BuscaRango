@@ -49,33 +49,6 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Button btnFiltrar;
         
         /// <summary>
-        /// lblNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblNome;
-        
-        /// <summary>
-        /// txtBuscaNome control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtBuscaNome;
-        
-        /// <summary>
-        /// lblDescricao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblDescricao;
-        
-        /// <summary>
         /// txtBuscaDescricao control.
         /// </summary>
         /// <remarks>
@@ -83,15 +56,6 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtBuscaDescricao;
-        
-        /// <summary>
-        /// lblPrecoDe control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecoDe;
         
         /// <summary>
         /// txtPrecoDe control.
@@ -103,15 +67,6 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.TextBox txtPrecoDe;
         
         /// <summary>
-        /// lblPrecoAte control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPrecoAte;
-        
-        /// <summary>
         /// txtPrecoAte control.
         /// </summary>
         /// <remarks>
@@ -119,15 +74,6 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtPrecoAte;
-        
-        /// <summary>
-        /// lblEntrega control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblEntrega;
         
         /// <summary>
         /// chkEntrega control.
@@ -139,31 +85,13 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.CheckBox chkEntrega;
         
         /// <summary>
-        /// lblTags control.
+        /// chkTags control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblTags;
-        
-        /// <summary>
-        /// txtTags control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtTags;
-        
-        /// <summary>
-        /// lblCaracteristicas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblCaracteristicas;
+        protected global::System.Web.UI.WebControls.CheckBoxList chkTags;
         
         /// <summary>
         /// ddlCaracteristicas control.
@@ -173,15 +101,6 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.DropDownList ddlCaracteristicas;
-        
-        /// <summary>
-        /// lblAvaliacao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblAvaliacao;
         
         /// <summary>
         /// ddlAvaliacao control.

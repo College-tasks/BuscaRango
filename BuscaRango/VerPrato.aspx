@@ -7,6 +7,7 @@
     <!--Container Start-->
     <section id="container-fluid">
         <section id="container">
+
             <!--bx slider start..-->
             <div class="two-third">
                 <ul class="bxslider">

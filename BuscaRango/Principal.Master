@@ -26,7 +26,7 @@
     <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Viga' />
 </head>
 <body>
-        <form id="form1" runat="server">
+    <form id="form1" runat="server">
         <!--<asp:ScriptReference Path="~/js/superized-custom.js" />-->
         <asp:ScriptManager ID="smBR" runat="server">
             <Scripts>
@@ -36,6 +36,9 @@
                 <asp:ScriptReference Path="~/js/supersized.shutter.js" />
                 <asp:ScriptReference Path="~/js/jquery.bxslider.js" />
                 <asp:ScriptReference Path="~/js/custom.js" />
+                <asp:ScriptReference Path="~/js/jquery.isotope.min.js" />
+                <asp:ScriptReference Path="~/js/owl.carousel.js" />
+                <asp:ScriptReference Path="~/js/jquery.prettyPhoto.js" />
             </Scripts>
         </asp:ScriptManager>
 
@@ -139,6 +142,5 @@
 
         });
     </script>
-
 </body>
 </html>

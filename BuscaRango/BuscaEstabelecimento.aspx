@@ -14,46 +14,22 @@
                 <section id="container">
                     <!--Busca Simples-->
                     <div>
-                        <asp:TextBox ID="txtBusca" runat="server" Width="350px" placeholder="Buscar Estabelecimento"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" />
-                        <asp:Button ID="btnFiltrar" runat="server" Text="+ Filtros" />
+                        <asp:TextBox ID="txtBusca" runat="server" Width="350px" placeholder="Buscar Estabelecimento" CssClass="txt-busca"></asp:TextBox>
+                        <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" CssClass="btn-busca" />
+                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtros Avançados" OnClientClick="$('#busca-avancada').toggle(); return false;" CssClass="btn-busca" />
                     </div>
                     <!--Busca Avançada-->
-                    <div>
-                        <br />
-                        <asp:Label ID="lblNome" runat="server" Text="Nome: "></asp:Label>
-                        <asp:TextBox ID="txtBuscaNome" Width="500px" runat="server" placeholder="Digite aqui o nome do estabelecimento"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblDescricao" runat="server" Text="Descrição: "></asp:Label>
-                        <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Digite aqui algum termo que descreva o estabelecimento"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblEndereco" runat="server" Text="Endereço: "></asp:Label>
-                        <asp:TextBox ID="txtEndereco" runat="server" Text="Endereço:"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblTelefone" runat="server" Text="Telefone: "></asp:Label>
-                        <asp:TextBox ID="txtTelefone" runat="server" Text="Telefone:"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Label ID="lblEntrega" runat="server" Text="Possui tele-entrega: "></asp:Label>
-                        <asp:CheckBox ID="chkEntrega" runat="server" />
-                        <asp:Label ID="lblMusica" runat="server" Text="Possui música ao vivo: "></asp:Label>
-                        <asp:CheckBox ID="chkMusica" runat="server" />
-                        <asp:Label ID="lblEstacionamento" runat="server" Text="Possui estacionamento: "></asp:Label>
-                        <asp:CheckBox ID="chkEstacionamento" runat="server" />
-                        <asp:Label ID="lblFraldario" runat="server" Text="Possui fraldário: "></asp:Label>
-                        <asp:CheckBox ID="chkFraldario" runat="server" />
-                        <br />
-                        <asp:Label ID="lblTags" runat="server" Text="Tags: "></asp:Label>
-                        <asp:DropDownList runat="server" ID="cmbTags"></asp:DropDownList>
-                        <asp:TextBox Visible="false" ID="txtTags" runat="server" placeholder="Digite aqui algumas palavras-chave"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblCaracteristicas" runat="server" Text="Características: "></asp:Label>
+                    <div id="busca-avancada">
+                        <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
+                        <asp:CheckBox ID="chkEntrega" runat="server" Text="Possui Tele-Entrega" />
+                        <asp:CheckBox ID="chkMusica" runat="server" Text="Possui Música Ao Vivo" />
+                        <asp:CheckBox ID="chkEstacionamento" runat="server" Text="Possui Estacionamento" />
+                        <asp:CheckBox ID="chkFraldario" runat="server" Text="Possui Fraldário" />
+                        <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
                         <asp:DropDownList ID="ddlCaracteristicas" runat="server"></asp:DropDownList>
-                        <br />
-                        <asp:Label ID="lblAvaliacao" runat="server" Text="Avaliação: "></asp:Label>
                         <asp:DropDownList ID="ddlAvaliacao" runat="server"></asp:DropDownList>
                         <br />
-                        <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" />
+                        <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" CssClass="btn-busca" />
                     </div>
                     <!--food menu start..-->
                     <ul class="portfolio_items isotope-container clearfix portfolio-page-template gallery">

@@ -31,24 +31,6 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Label lblNome;
         
         /// <summary>
-        /// lblPreco control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblPreco;
-        
-        /// <summary>
-        /// hplEstab control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.HyperLink hplEstab;
-        
-        /// <summary>
         /// lblDesc control.
         /// </summary>
         /// <remarks>

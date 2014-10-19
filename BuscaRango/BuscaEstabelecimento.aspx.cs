@@ -112,29 +112,12 @@ namespace BuscaRango
 
             lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)Session["Data"]);
 
-            if (txtBuscaNome.Text != "")
-            {
-                lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
-                    .Where(x => x.Razao_Social.ToUpper()
-                        .Contains(txtBuscaNome.Text.ToUpper()))
-                    .ToList();
-            }
-
             if (txtBuscaDescricao.Text != "")
             {
                 lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
                     .Where(x => x.Descricao.ToUpper()
                         .Contains(txtBuscaDescricao.Text.ToUpper()))
                     .ToList();
-            }
-
-            if (txtEndereco.Text != "")
-            {
-
-                lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados
-                    .Where(x => x.Endereco.ToUpper()
-                        .Contains(txtEndereco.Text.ToUpper()))
-                        .ToList();
             }
 
             //lstEstabelecimentosFiltrados = lstEstabelecimentosFiltrados

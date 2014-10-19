@@ -4,8 +4,8 @@
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
     <!--Container Start-->
-    <section id="container-fluid">
-        <section id="container">
+    <section id="container">
+        <section id="container-fluid">
             <!--bx slider start..-->
             <div class="two-third">
                 <ul class="bxslider">
@@ -18,13 +18,11 @@
 
             <!-- sidebar start..-->
             <div class="one-third-last">
-                <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
+                <h3>
+                    <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
+                </h3>
                 <div class="text-container">
                     <p>
-                        <asp:Label ID="lblPreco" runat="server" Text=""></asp:Label>
-                        <br />
-                        <asp:HyperLink ID="hplEstab" runat="server"></asp:HyperLink>
-                        <br />
                         <asp:Label ID="lblDesc" runat="server" Text=""></asp:Label>
                     </p>
                 </div>

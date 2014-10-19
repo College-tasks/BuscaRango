@@ -12,38 +12,21 @@
                 <section id="container">
                     <!--Busca Simples-->
                     <div>
-                        <asp:TextBox ID="txtBusca" runat="server" placeholder="Buscar Prato"></asp:TextBox>
-                        <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_OnClick" Text="Buscar" />
-                        <asp:Button ID="btnFiltrar" runat="server" Text="+ Filtros" />
+                        <asp:TextBox ID="txtBusca" runat="server" placeholder="Buscar Prato" CssClass="txt-busca"></asp:TextBox>
+                        <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_OnClick" Text="Buscar" CssClass="btn-busca" />
+                        <asp:Button ID="btnFiltrar" runat="server" Text="Filtros Avançados" OnClientClick="$('#busca-avancada').toggle(); return false;" CssClass="btn-busca" />
                     </div>
                     <!--Busca Avançada-->
-                    <div>
-                        <br />
-                        <asp:Label ID="lblNome" runat="server" Text="Nome: "></asp:Label>
-                        <asp:TextBox ID="txtBuscaNome" runat="server" placeholder="Digite aqui o nome do prato"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblDescricao" runat="server" Text="Descrição: "></asp:Label>
-                        <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Digite aqui algum termo que descreva o prato"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblPrecoDe" runat="server" Text="Preço de R$: "></asp:Label>
-                        <asp:TextBox ID="txtPrecoDe" runat="server" placeholder="1,00"></asp:TextBox>
-                        <asp:Label ID="lblPrecoAte" runat="server" Text="Até R$: "></asp:Label>
-                        <asp:TextBox ID="txtPrecoAte" runat="server" placeholder="100,00"></asp:TextBox>
-                        <br />
-                        <br />
-                        <asp:Label ID="lblEntrega" runat="server" Text="Possui tele-entrega: "></asp:Label>
-                        <asp:CheckBox ID="chkEntrega" runat="server" />
-                        <br />
-                        <asp:Label ID="lblTags" runat="server" Text="Tags: "></asp:Label>
-                        <asp:TextBox ID="txtTags" runat="server" placeholder="Digite aqui algumas palavras-chave"></asp:TextBox>
-                        <br />
-                        <asp:Label ID="lblCaracteristicas" runat="server" Text="Características: "></asp:Label>
+                    <div id="busca-avancada">
+                        <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecoDe" runat="server" placeholder="Preço DE" type="number" step="any" CssClass="txt-busca"></asp:TextBox>
+                        <asp:TextBox ID="txtPrecoAte" runat="server" placeholder="Preço ATÉ"  type="number" step="any" CssClass="txt-busca"></asp:TextBox>
+                        <asp:CheckBox ID="chkEntrega" runat="server" Text="Possui Entrega" />
+                        <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
                         <asp:DropDownList ID="ddlCaracteristicas" runat="server"></asp:DropDownList>
-                        <br />
-                        <asp:Label ID="lblAvaliacao" runat="server" Text="Avaliação: "></asp:Label>
                         <asp:DropDownList ID="ddlAvaliacao" runat="server"></asp:DropDownList>
                         <br />
-                        <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" />
+                        <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" CssClass="btn-busca" />
                     </div>
                     <!--food menu start..-->
                     <ul class="portfolio_items isotope-container clearfix portfolio-page-template gallery">
@@ -73,8 +56,4 @@
             <!--Container End-->
         </ContentTemplate>
     </asp:UpdatePanel>
-    <!--<Triggers>
-            <asp:AsyncPostBackTrigger ControlID="btnBuscar" EventName="Click" />
-            <asp:AsyncPostBackTrigger ControlID="btnBuscaAvancada" EventName="Click" />
-        </Triggers>-->
 </asp:Content>
