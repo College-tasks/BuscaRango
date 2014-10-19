@@ -1,0 +1,530 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<!--
+This file is used by the publish/package process of your Web project. You can customize the behavior of this process
+by editing this MSBuild file. In order to learn more about this please visit http://go.microsoft.com/fwlink/?LinkID=208121. 
+-->
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <TimeStampOfAssociatedLegacyPublishXmlFile />
+    <EncryptedPassword>AQAAANCMnd8BFdERjHoAwE/Cl+sBAAAAfdooYKoOi0KuO1z0dSV9mAAAAAACAAAAAAAQZgAAAAEAACAAAAAIGQ91JNxCkVWShwhkHMc7JLIbxTsLyjM2YVbGfDzKFwAAAAAOgAAAAAIAACAAAABCEHH9TX+GWt+J1fDAtWty5my/g98LTuZowkN+RJODHSAAAAB68lKkQ2aAghFmmjRlFgFOzT1+QxC2go0svXCI5D6/bkAAAACZG4xcJGLlY/k6r/yqHCiyC/RFB9zkKdpb5I7Cxfie9BFD4Wzi4w+cq0R4yJ+j+bFJLYwVfH7Q0hFQXUMsSfM7</EncryptedPassword>
+    <_PublishTargetUrl>ftp://ftp.buscarango.simorc.com.br</_PublishTargetUrl>
+  </PropertyGroup>
+  <ItemGroup>
+    <File Include="bin/BuscaRango.dll">
+      <publishTime>10/19/2014 17:13:16</publishTime>
+    </File>
+    <File Include="bin/BuscaRangoCode.dll">
+      <publishTime>10/19/2014 17:13:16</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.dll">
+      <publishTime>10/13/2014 22:51:54</publishTime>
+    </File>
+    <File Include="bin/EntityFramework.SqlServer.dll">
+      <publishTime>10/13/2014 22:51:54</publishTime>
+    </File>
+    <File Include="BuscaEstabelecimento.aspx">
+      <publishTime>10/18/2014 21:19:43</publishTime>
+    </File>
+    <File Include="BuscaPrato.aspx">
+      <publishTime>10/18/2014 21:19:40</publishTime>
+    </File>
+    <File Include="css/blog.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/font-awesome.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/Isotope.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/jquery.bxslider.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/layout.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/menu.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/owl.carousel.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/prettyPhoto.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/reset.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/responsive.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/supersized.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="css/supersized.shutter.css">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="Default.aspx">
+      <publishTime>10/13/2014 13:44:54</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.eot%40">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.svg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.ttf">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfont.woff">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="fonts/fontawesome-webfontba72.svg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="Global.asax">
+      <publishTime>10/06/2014 07:30:07</publishTime>
+    </File>
+    <File Include="images/ajax-loader_dark.gif">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/best-restuarant.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/blockquote.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/blog_img01.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/blog_img02.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/bx_silderimg02.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/bx_silderimg03.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/bx_silderimg04.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/comment-img.jpeg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/content_opc_bg.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Descr.WD3">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-1.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-2.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-3.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-4.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-5.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-6.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/ds-img-7.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/bocao.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/bocao_t.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/estab1.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/estab1_t.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/estab2.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/estab2_t.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/Miro.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/Miro_t.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/tialaura.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Estabelecimento/tialaura_t.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/food_icon01.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon02.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon03.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon04.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon05.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon06.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon07.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon08.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon09.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon10.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon11.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon12.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon13.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon14.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon15.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon16.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon17.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon18.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon19.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/food_icon20.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-1.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-10.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-11.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-12.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-2.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-3.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-4.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-5.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-6.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-7.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-8.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/icon-img-9.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/image.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/link_post.png">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/list_arrow.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/menu_bg.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Prato/AlaMinuta.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/AlaMinuta_t.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/ConfitPato.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/ConfitPato_t.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Prato/FilePeixe.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/FilePeixe_t.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Prato/Picanha.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/Picanha_t.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Prato/PratoFeito.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/PratoFeito_t.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/Prato/Yakissoba.jpg">
+      <publishTime>10/13/2014 13:45:00</publishTime>
+    </File>
+    <File Include="images/Prato/Yakissoba_t.jpg">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/btnNext.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/btnPrevious.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/contentPattern.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/Descr.WD3">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/loader.gif">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_rounded/sprite.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/btnNext.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/btnPrevious.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/Descr.WD3">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/loader.gif">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/dark_square/sprite.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/default_thumb.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/Descr.WD3">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/loader.gif">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_next.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_prev.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_x.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/default/sprite_y.png">
+      <publishTime>10/13/2014 13:44:55</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/btnNext.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/btnPrevious.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternBottom.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternLeft.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternRight.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/contentPatternTop.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/default_thumbnail.gif">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/Descr.WD3">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/loader.gif">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/facebook/sprite.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/btnNext.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/btnPrevious.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/Descr.WD3">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/loader.gif">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_rounded/sprite.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/btnNext.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/btnPrevious.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/Descr.WD3">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/prettyPhoto/light_square/sprite.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/slider-img-1.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/slider-img-2.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/slider-img-3.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/slider-img-4.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/Descr.WD3">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/facebook.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/pinrest.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/skype.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/stumbleupon.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/social-icons/twitter.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/team01.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/team02.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/team03.jpg">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/top-opc.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="images/video-icon.png">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="js/contact.js">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="js/custom.js">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="js/jquery.bxslider.js">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="js/jquery.easing.min.js">
+      <publishTime>10/13/2014 13:44:56</publishTime>
+    </File>
+    <File Include="js/jquery.isotope.min.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/jquery.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/jquery.prettyPhoto.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/owl.carousel.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/superized-custom.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/supersized.3.2.7.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="js/supersized.shutter.js">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="packages.config">
+      <publishTime>10/13/2014 13:44:57</publishTime>
+    </File>
+    <File Include="Principal.Master">
+      <publishTime>10/18/2014 20:30:09</publishTime>
+    </File>
+    <File Include="style.css">
+      <publishTime>10/18/2014 21:18:22</publishTime>
+    </File>
+    <File Include="VerEstabelecimento.aspx">
+      <publishTime>10/19/2014 17:06:03</publishTime>
+    </File>
+    <File Include="VerPrato.aspx">
+      <publishTime>10/18/2014 20:11:41</publishTime>
+    </File>
+    <File Include="Web.config">
+      <publishTime>10/19/2014 17:13:22</publishTime>
+    </File>
+  </ItemGroup>
+</Project>

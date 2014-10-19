@@ -159,6 +159,7 @@
     <Compile Include="Service\PratoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="AppCode\Retorno.cs" />
+    <Compile Include="Service\UsuarioService.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.Config">

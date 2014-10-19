@@ -20,7 +20,7 @@ namespace BuscaRango
             RouteTable.Routes.MapPageRoute("RotaVerPrato", "VerPrato/{IdPrato}/", "~/VerPrato.aspx");
             RouteTable.Routes.MapPageRoute("RotaVerEstabelecimento", "VerEstabelecimento/{IdEstabelecimento}/", "~/VerEstabelecimento.aspx");
             RouteTable.Routes.MapPageRoute("RotaConfiguracao", "Configuracao", "~/Configuracao.aspx");
-            RouteTable.Routes.MapPageRoute("RotaLogin", "Login", "~/Login.aspx");
+            RouteTable.Routes.MapPageRoute("RotaLogin", "Login", "~/Login/Default.aspx");
         }
 
         protected void Session_Start(object sender, EventArgs e)

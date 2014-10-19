@@ -212,7 +212,8 @@
     <Content Include="js\superized-custom.js" />
     <Content Include="js\supersized.3.2.7.js" />
     <Content Include="js\supersized.shutter.js" />
-    <Content Include="Login.aspx" />
+    <Content Include="Login\Default.aspx" />
+    <Content Include="Login\style.css" />
     <Content Include="style.css" />
     <Content Include="VerEstabelecimento.aspx" />
     <Content Include="VerPrato.aspx" />
@@ -243,12 +244,12 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
-    <Compile Include="Login.aspx.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Login\Default.aspx.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
-    <Compile Include="Login.aspx.designer.cs">
-      <DependentUpon>Login.aspx</DependentUpon>
+    <Compile Include="Login\Default.aspx.designer.cs">
+      <DependentUpon>Default.aspx</DependentUpon>
     </Compile>
     <Compile Include="Principal.Master.cs">
       <DependentUpon>Principal.Master</DependentUpon>
