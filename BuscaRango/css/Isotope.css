@@ -214,6 +214,7 @@ a.link_to_video {
 .portfolio_post_content {
     padding: 15px;
     text-align: center;
+    height: 115px !important;
 }
 
 .clearfix:after {

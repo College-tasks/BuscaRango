@@ -34,6 +34,7 @@ namespace BuscaRango
                     LstPratos.ForEach(x => LstPratosFiltrados.Add(x));
                     CarregaPratosFiltrados();
                     Session["Data"] = LstPratos;
+                    CarregaTags();
                 }
                 else
                 {
@@ -96,22 +97,32 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void btnBuscar_OnClick(object sender, EventArgs e)
         {
-            /*
             LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
                 .Where(x => x.Nome.ToUpper()
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
-             */
         }
 
+        /// <summary>
+        /// Busca Avançada Click
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
         protected void btnBuscaAvancada_OnClick(object sender, EventArgs e)
         {
             var precoInicial = txtPrecoDe.Text.Equals("") ? 0 : double.Parse(txtPrecoDe.Text);
             var precoFinal = txtPrecoAte.Text.Equals("") ? 0 : double.Parse(txtPrecoAte.Text);
 
+            // CheckBoxList
+            List<string> tagsId = chkTags.Items.Cast<ListItem>()
+            .Where(x => x.Selected)
+            .Select(x => x.Value)
+            .ToList();
+
             LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]);
 
+            // Descrição
             if (txtBuscaDescricao.Text != "")
             {
                 LstPratosFiltrados = LstPratosFiltrados
@@ -120,19 +131,72 @@ namespace BuscaRango
                     .ToList();
             }
 
-            if (!((precoInicial.Equals(0)) && (precoFinal.Equals(0))))
+            // Preço inicial
+            if (precoInicial > 0)
             {
                 LstPratosFiltrados = LstPratosFiltrados
-                    .Where(x => x.Preco >= precoInicial
-                        && x.Preco <= precoFinal)
+                                    .Where(x => x.Preco >= precoInicial)
+                                    .ToList();
+            }
+
+            // Preço final
+            if (precoFinal > 0)
+            {
+                LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Preco <= precoFinal)
                     .ToList();
             }
 
-            LstPratosFiltrados = LstPratosFiltrados
-                    .Where(x => x.Tem_Entrega == chkEntrega.Checked)
+            // Entrega
+            if (chkEntrega.Checked)
+            {
+                LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.Tem_Entrega == true)
                     .ToList();
-            CarregaPratosFiltrados();
+            }
 
+            // Tags
+            if (tagsId.Count > 0)
+            {
+                foreach (string item in tagsId)
+                {
+                    LstPratosFiltrados = LstPratosFiltrados
+                    .Where(x => x.BR_Tag.Any(y => y.Id.ToString() == item))
+                    .ToList();
+                }
+            }
+
+            CarregaPratosFiltrados();
+            ResetaCamposBusca();
+        }
+
+        /// <summary>
+        /// Reseta os campos de busca
+        /// </summary>
+        private void ResetaCamposBusca()
+        {
+            txtBusca.Text = "";
+            txtBuscaDescricao.Text = "";
+            txtPrecoAte.Text = "";
+            txtPrecoDe.Text = "";
+            chkEntrega.Checked = false;
+
+            foreach (ListItem item in chkTags.Items)
+            {
+                item.Selected = false;
+            }
+        }
+
+        /// <summary>
+        /// Carrega Tags
+        /// </summary>
+        private void CarregaTags()
+        {
+            List<BR_Tag> lst = (List<BR_Tag>)TagService.SelectAllComPrato().RetObj;
+            chkTags.DataSource = lst;
+            chkTags.DataTextField = "Tag";
+            chkTags.DataValueField = "Id";
+            chkTags.DataBind();
         }
     }
 }

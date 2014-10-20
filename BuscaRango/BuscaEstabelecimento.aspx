@@ -14,7 +14,7 @@
                 <section id="container">
                     <!--Busca Simples-->
                     <div>
-                        <asp:TextBox ID="txtBusca" runat="server" Width="350px" placeholder="Buscar Estabelecimento" CssClass="txt-busca"></asp:TextBox>
+                        <asp:TextBox ID="txtBusca" runat="server" Width="250px" placeholder="Buscar Estabelecimento" CssClass="txt-busca"></asp:TextBox>
                         <asp:Button ID="btnBuscar" runat="server" OnClick="btnBuscar_Click" Text="Buscar" CssClass="btn-busca" />
                         <asp:Button ID="btnFiltrar" runat="server" Text="Filtros Avançados" OnClientClick="$('#busca-avancada').toggle(); return false;" CssClass="btn-busca" />
                     </div>
@@ -26,8 +26,6 @@
                         <asp:CheckBox ID="chkEstacionamento" runat="server" Text="Possui Estacionamento" />
                         <asp:CheckBox ID="chkFraldario" runat="server" Text="Possui Fraldário" />
                         <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
-                        <asp:DropDownList ID="ddlCaracteristicas" runat="server"></asp:DropDownList>
-                        <asp:DropDownList ID="ddlAvaliacao" runat="server"></asp:DropDownList>
                         <br />
                         <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" CssClass="btn-busca" />
                     </div>

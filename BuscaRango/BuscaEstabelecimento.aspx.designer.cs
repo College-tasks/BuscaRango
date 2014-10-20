@@ -103,24 +103,6 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.CheckBoxList chkTags;
         
         /// <summary>
-        /// ddlCaracteristicas control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlCaracteristicas;
-        
-        /// <summary>
-        /// ddlAvaliacao control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.DropDownList ddlAvaliacao;
-        
-        /// <summary>
         /// btnBuscaAvancada control.
         /// </summary>
         /// <remarks>
