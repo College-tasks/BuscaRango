@@ -1,10 +1,12 @@
-﻿using BuscaRangoCode;
+﻿using ASPSnippets.FaceBookAPI;
+using BuscaRangoCode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 using System.Web;
+using System.Web.Script.Serialization;
 using System.Web.Security;
 using System.Web.UI;
 using System.Web.UI.WebControls;
@@ -24,6 +26,40 @@ namespace BuscaRango
             {
                 FormsAuthentication.SignOut();
                 Response.Redirect("~/Login");
+            }
+
+            // Facebook Login
+            FaceBookConnect.API_Key = "366974283471779";
+            FaceBookConnect.API_Secret = "fdeb8030a58b50111a76f1fad3010c49";
+
+            if (!IsPostBack)
+            {
+                if (Request.QueryString["error"] == "access_denied")
+                {
+                    ClientScript.RegisterStartupScript(this.GetType(), "alert", "alert('User has denied access.')", true);
+                    return;
+                }
+
+                string code = Request.QueryString["code"];
+                if (!string.IsNullOrEmpty(code))
+                {
+                    string data = FaceBookConnect.Fetch(code, "me");
+                    FacebookUser faceBookUser = new JavaScriptSerializer().Deserialize<FacebookUser>(data);
+                    faceBookUser.PictureUrl = string.Format("https://graph.facebook.com/{0}/picture", faceBookUser.Id);
+
+                    Retorno ret = UsuarioService.LogarFB(faceBookUser);
+
+                    if (ret.Sucesso)
+                    {
+                        FormsAuthentication.RedirectFromLoginPage(faceBookUser.Email, true);
+                    }
+                    else
+                    {
+                        lblMsg.Text = "Erro: " + ret.MsgErro;
+                    }
+                }
+
+                
             }
         }
 
@@ -82,6 +118,16 @@ namespace BuscaRango
 
             // retorna o valor criptografado
             return strBuilder.ToString().ToUpper();
+        }
+
+        /// <summary>
+        /// Facebook Login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnFacebook_Click(object sender, EventArgs e)
+        {
+            FaceBookConnect.Authorize("user_photos,email", Request.Url.AbsoluteUri.Split('?')[0]);
         }
     }
 }

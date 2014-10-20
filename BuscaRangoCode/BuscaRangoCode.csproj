@@ -155,6 +155,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Entities.edmx</DependentUpon>
     </Compile>
+    <Compile Include="FacebookUser.cs" />
     <Compile Include="Service\EstabelecimentoService.cs" />
     <Compile Include="Service\PratoService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

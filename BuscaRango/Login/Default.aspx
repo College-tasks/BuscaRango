@@ -20,6 +20,8 @@
                     <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
                     <br />
                     <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+                    <br />
+                    <asp:Button ID="btnFacebook" runat="server" Text="Logar com o Facebook" CssClass="facebook_button" OnClick="btnFacebook_Click" />
                 </div>
             </ContentTemplate>
         </asp:UpdatePanel>

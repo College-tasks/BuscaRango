@@ -31,7 +31,7 @@
         <EntityTypeShape EntityType="Entities_Namespace.BR_Permissao_Chamada" Width="1.5" PointX="6" PointY="23.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Entities_Namespace.BR_Prato" Width="1.5" PointX="5.25" PointY="41.625" IsExpanded="true" />
         <EntityTypeShape EntityType="Entities_Namespace.BR_Prato_Personalizado" Width="1.5" PointX="3" PointY="25.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="Entities_Namespace.BR_Referencias_Estabelecimento" Width="1.5" PointX="3" PointY="46.125" IsExpanded="true" />
+        <EntityTypeShape EntityType="Entities_Namespace.BR_Referencias_Estabelecimento" Width="1.5" PointX="0.875" PointY="42.25" IsExpanded="true" />
         <EntityTypeShape EntityType="Entities_Namespace.BR_Tag" Width="1.5" PointX="7.5" PointY="42.5" IsExpanded="true" />
         <EntityTypeShape EntityType="Entities_Namespace.BR_Tipo_Chamada" Width="1.5" PointX="3.75" PointY="13" IsExpanded="true" />
         <EntityTypeShape EntityType="Entities_Namespace.BR_Usuario" Width="1.5" PointX="0.75" PointY="18.25" IsExpanded="true" />

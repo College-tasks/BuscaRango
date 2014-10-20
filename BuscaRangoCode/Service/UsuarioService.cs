@@ -192,5 +192,50 @@ namespace BuscaRangoCode
             // Retorna o objeto de retorno
             return ret;
         }
+
+        /// <summary>
+        /// 
+        /// </summary>
+        /// <returns></returns>
+        public static Retorno LogarFB(FacebookUser user)
+        {
+            // Cria objeto de retorno
+            Retorno ret = new Retorno();
+
+            // Usando o contexto ER_Entities, execute o bloco de código
+            using (var ctx = new ER_Entities())
+            {
+                try
+                {
+                    // Recebe o primeiro objeto da lista de Entidades que possui a expressão especificada
+                    var obj = ctx.BR_Usuario.FirstOrDefault(x => x.Email == user.Email);
+
+                    // Cadastra o usuário
+                    if (obj == null)
+                    {
+                        BR_Usuario us = new BR_Usuario();
+                        us.Email = user.Email;
+                        us.Nome = user.Name;
+                        us.Foto = user.PictureUrl;
+                        us.Token = user.Id;
+
+                        UsuarioService.Insert(us);
+                        ret.Sucesso = true;
+                    }
+                    else
+                    {
+                        ret.Sucesso = true;
+                    }
+                }
+                catch (Exception ex)
+                {
+                    ret.Sucesso = false;
+                    ret.MsgErro = ex.Message;
+                }
+            }
+
+            // Retorna o objeto de retorno
+            return ret;
+        }
     }
 }
