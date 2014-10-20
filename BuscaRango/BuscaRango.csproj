@@ -140,6 +140,8 @@
     <Content Include="images\Prato\ConfitPato.jpg" />
     <Content Include="images\Prato\FilePeixe.jpg" />
     <Content Include="images\Prato\Picanha.jpg" />
+    <Content Include="images\Prato\PizzaCalabresa.jpg" />
+    <Content Include="images\Prato\PizzaPortuguesa.jpg" />
     <Content Include="images\Prato\PratoFeito.jpg" />
     <Content Include="images\Prato\Yakissoba.jpg" />
     <Content Include="images\prettyPhoto\dark_rounded\btnNext.png" />

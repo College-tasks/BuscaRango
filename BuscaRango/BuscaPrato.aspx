@@ -2,6 +2,23 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <title>Busca Rango | Busca de Pratos</title>
+    <script>
+        function item_hover() {
+            $('.item-container').hover(function () {
+                $(this).find('img').fadeTo(500, 0.6);
+                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '30%', opacity: 1 }, 600);
+                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '45%', opacity: 1 }, 600);
+
+                $(this).find('a.link_to_post').css({ 'right': '-50px', 'display': 'block' }).stop().animate({ 'right': '30%', opacity: 1 }, 600);
+
+            }, function () {
+                $(this).find('img').fadeTo(500, 1);
+                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
+                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
+                $(this).find('a.link_to_post').css({ 'right': '50px', 'display': 'block' }).stop().animate({ 'right': '-30%', opacity: 0 }, 600);
+            });
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
 
@@ -21,7 +38,7 @@
                         <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
                         <asp:TextBox ID="txtPrecoDe" runat="server" placeholder="Preço DE" type="number" step="any" CssClass="txt-busca"></asp:TextBox>
                         <asp:TextBox ID="txtPrecoAte" runat="server" placeholder="Preço ATÉ" type="number" step="any" CssClass="txt-busca"></asp:TextBox>
-                        <asp:CheckBox ID="chkEntrega" runat="server" Text="Possui Entrega" />
+                        <asp:CheckBox ID="chkEntrega" runat="server" Text=" Possui Entrega " />
                         <div style="height: 75px; overflow: auto;">
                             <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
                         </div>
@@ -31,7 +48,6 @@
                     <!--food menu start..-->
                     <ul class="portfolio_items isotope-container clearfix portfolio-page-template gallery">
                         <!-- Dados -->
-
                         <asp:Repeater ID="rptDados" runat="server" OnItemDataBound="rptDados_ItemDataBound">
                             <ItemTemplate>
                                 <li class="isotope-item all illustration">

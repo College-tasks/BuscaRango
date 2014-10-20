@@ -22,9 +22,6 @@ namespace BuscaRango
         {
             if (!Page.IsPostBack)
             {
-                // Deixa o botão Home com Danger
-                MudaCorBotao("btnPrato");
-
                 var pratos = PratoService.SelectAll();
 
                 LstPratosFiltrados = new List<BR_Prato>();
@@ -41,17 +38,6 @@ namespace BuscaRango
                     Response.Write("Erro: " + pratos.MsgErro);
                 }
             }
-        }
-
-        /// <summary>
-        /// Muda a cor do botão da página atual
-        /// </summary>
-        /// <param name="btn"></param>
-        private void MudaCorBotao(string btn)
-        {
-            //MasterPage master = this.Master;
-            //Button home = (Button)master.FindControl(btn);
-            //home.CssClass = home.CssClass + " current";
         }
 
         /// <summary>
@@ -102,6 +88,8 @@ namespace BuscaRango
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         /// <summary>
@@ -168,6 +156,7 @@ namespace BuscaRango
 
             CarregaPratosFiltrados();
             ResetaCamposBusca();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverAvancado", "item_hover();", true);
         }
 
         /// <summary>

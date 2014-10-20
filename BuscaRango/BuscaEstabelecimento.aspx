@@ -2,11 +2,26 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <title>Busca Rango | Busca de Estabelecimentos</title>
-    <link rel="stylesheet" type="text/css" href="css/Isotope.css" />
-    <link rel="stylesheet" type="text/css" href="css/owl.carousel.css" />
-    <link rel="stylesheet" type="text/css" href="css/prettyPhoto.css" />
+    <script>
+        function item_hover(){
+            $('.item-container').hover(function () {
+                $(this).find('img').fadeTo(500, 0.6);
+                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '30%', opacity: 1 }, 600);
+                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '45%', opacity: 1 }, 600);
+
+                $(this).find('a.link_to_post').css({ 'right': '-50px', 'display': 'block' }).stop().animate({ 'right': '30%', opacity: 1 }, 600);
+
+            }, function () {
+                $(this).find('img').fadeTo(500, 1);
+                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
+                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
+                $(this).find('a.link_to_post').css({ 'right': '50px', 'display': 'block' }).stop().animate({ 'right': '-30%', opacity: 0 }, 600);
+            });
+        }
+    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
+
     <asp:UpdatePanel ID="upBusca" runat="server">
         <ContentTemplate>
             <!--Container Start-->
@@ -21,11 +36,18 @@
                     <!--Busca Avançada-->
                     <div id="busca-avancada">
                         <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
-                        <asp:CheckBox ID="chkEntrega" runat="server" Text="Possui Tele-Entrega" />
-                        <asp:CheckBox ID="chkMusica" runat="server" Text="Possui Música Ao Vivo" />
-                        <asp:CheckBox ID="chkEstacionamento" runat="server" Text="Possui Estacionamento" />
-                        <asp:CheckBox ID="chkFraldario" runat="server" Text="Possui Fraldário" />
-                        <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
+                        <asp:CheckBox ID="chkAbreSegunda" runat="server" Text=" Abre Segunda " />
+                        <asp:CheckBox ID="chkAbreDomingo" runat="server" Text=" Abre Domingo " />
+                        <asp:CheckBox ID="chkAbreSabado" runat="server" Text=" Abre Sábado " />
+                        <asp:CheckBox ID="chkEntrega" runat="server" Text=" Possui Entrega " />
+                        <asp:CheckBox ID="chkAcessoDeficiente" runat="server" Text=" Possui Acesso para Deficientes " />
+                        <asp:CheckBox ID="chkEstacionamento" runat="server" Text=" Possui Estacionamento " />
+                        <asp:CheckBox ID="chkFraldario" runat="server" Text=" Possui Fraldário " />
+                        <asp:CheckBox ID="chkMusica" runat="server" Text=" Possui Música ao Vivo " />
+                        <asp:CheckBox ID="chkTemReserva" runat="server" Text=" Possui Reserva " />
+                        <div style="height: 75px; overflow: auto;">
+                            <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
+                        </div>
                         <br />
                         <asp:Button ID="btnBuscaAvancada" runat="server" OnClick="btnBuscaAvancada_OnClick" Text="Busca Avançada" CssClass="btn-busca" />
                     </div>

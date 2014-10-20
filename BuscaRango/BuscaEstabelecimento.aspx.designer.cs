@@ -58,6 +58,33 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.TextBox txtBuscaDescricao;
         
         /// <summary>
+        /// chkAbreSegunda control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkAbreSegunda;
+        
+        /// <summary>
+        /// chkAbreDomingo control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkAbreDomingo;
+        
+        /// <summary>
+        /// chkAbreSabado control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkAbreSabado;
+        
+        /// <summary>
         /// chkEntrega control.
         /// </summary>
         /// <remarks>
@@ -67,13 +94,13 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.CheckBox chkEntrega;
         
         /// <summary>
-        /// chkMusica control.
+        /// chkAcessoDeficiente control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBox chkMusica;
+        protected global::System.Web.UI.WebControls.CheckBox chkAcessoDeficiente;
         
         /// <summary>
         /// chkEstacionamento control.
@@ -92,6 +119,24 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.CheckBox chkFraldario;
+        
+        /// <summary>
+        /// chkMusica control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkMusica;
+        
+        /// <summary>
+        /// chkTemReserva control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.CheckBox chkTemReserva;
         
         /// <summary>
         /// chkTags control.
