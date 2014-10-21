@@ -1,0 +1,146 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="BuscaRango.Principal" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <asp:ContentPlaceHolder ID="cphHead" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
+
+    <link rel="stylesheet" type="text/css" href="~/css/reset.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/layout.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/supersized.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/supersized.shutter.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/menu.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/font-awesome.css" />
+    <link rel="stylesheet" type="text/css" href="~/style.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/responsive.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/jquery.bxslider.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/Isotope.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/owl.carousel.css" />
+    <link rel="stylesheet" type="text/css" href="~/css/prettyPhoto.css" />
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Leckerli+One' />
+    <link rel="stylesheet" type="text/css" href='http://fonts.googleapis.com/css?family=Viga' />
+</head>
+<body>
+    <form id="form1" runat="server">
+        <!--<asp:ScriptReference Path="~/js/superized-custom.js" />-->
+        <asp:ScriptManager ID="smBR" runat="server">
+            <Scripts>
+                <asp:ScriptReference Path="~/js/jquery.js" />
+                <asp:ScriptReference Path="~/js/jquery.easing.min.js" />
+                <asp:ScriptReference Path="~/js/supersized.3.2.7.js" />
+                <asp:ScriptReference Path="~/js/supersized.shutter.js" />
+                <asp:ScriptReference Path="~/js/jquery.bxslider.js" />
+                <asp:ScriptReference Path="~/js/custom.js" />
+                <asp:ScriptReference Path="~/js/jquery.isotope.min.js" />
+                <asp:ScriptReference Path="~/js/owl.carousel.js" />
+                <asp:ScriptReference Path="~/js/jquery.prettyPhoto.js" />
+            </Scripts>
+        </asp:ScriptManager>
+
+        <!--Control Bar Start-->
+        <div id="controls-wrapper" class="load-item">
+            <div id="controls">
+                <ul id="slide-list"></ul>
+            </div>
+        </div>
+        <!--Control Bar End-->
+
+        <!--Logo Start-->
+        <section id="logo">
+            <asp:HyperLink ID="HyperLink1" runat="server" NavigateUrl="~/Home">
+                <h1>Busca Rango</h1>
+            </asp:HyperLink>
+        </section>
+        <!--Logo End-->
+
+        <!--Menu Start-->
+        <nav class="menu nav_wrapper" id="myslidemenu">
+            <ul class="menu" id="jqueryslidemenu">
+                <li class="current">
+                    <asp:HyperLink ID="HyperLink2" runat="server" NavigateUrl="~/Home">
+                        <i class="fa fa-home"></i>Home
+                    </asp:HyperLink>
+                </li>
+                <li><a href="#">
+                    <i class="fa fa-cutlery"></i>Buscar</a>
+                    <ul class="sub-menu">
+                        <li>
+                            <asp:HyperLink ID="HyperLink3" runat="server" NavigateUrl="~/Lugar">Estabelecimentos</asp:HyperLink></li>
+                        <li>
+                            <asp:HyperLink ID="HyperLink4" runat="server" NavigateUrl="~/Prato">Pratos</asp:HyperLink></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <!--Menu End-->
+
+        <asp:ContentPlaceHolder ID="cphConteudo" runat="server">
+        </asp:ContentPlaceHolder>
+
+        <!--Footer Start-->
+        <footer>
+            <div class="one-third">
+                <p>Busca Rango - Grupo 3</p>
+            </div>
+            <div class="one-third">
+                <p class="copy-right">SENAC RS</p>
+            </div>
+        </footer>
+        <!--Footer End-->
+    </form>
+    <script>
+        jQuery(document).ready(function ($) {
+            'use strict';
+
+            $.supersized({
+
+                // Functionality
+                slideshow: 1,            // Slideshow on/off
+                autoplay: 1,            // Slideshow starts playing automatically
+                start_slide: 1,            // Start slide (0 is random)
+                stop_loop: 0,            // Pauses slideshow on last slide
+                random: 0,            // Randomize slide order (Ignores start slide)
+                slide_interval: 3000,        // Length between transitions
+                transition: 1,             // 0-None, 1-Fade, 2-Slide Top, 3-Slide Right, 4-Slide Bottom, 5-Slide Left, 6-Carousel Right, 7-Carousel Left
+                transition_speed: 1000,        // Speed of transition
+                new_window: 1,            // Image links open in new window/tab
+                pause_hover: 0,            // Pause slideshow on hover
+                keyboard_nav: 1,            // Keyboard navigation on/off
+                performance: 1,            // 0-Normal, 1-Hybrid speed/quality, 2-Optimizes image quality, 3-Optimizes transition speed // (Only works for Firefox/IE, not Webkit)
+                image_protect: 1,            // Disables image dragging and right click with Javascript
+
+                // Size & Position                           
+                min_width: 0,            // Min width allowed (in pixels)
+                min_height: 0,            // Min height allowed (in pixels)
+                vertical_center: 1,            // Vertically center background
+                horizontal_center: 1,            // Horizontally center background
+                fit_always: 0,            // Image will never exceed browser width or height (Ignores min. dimensions)
+                fit_portrait: 1,            // Portrait images will not exceed browser height
+                fit_landscape: 0,            // Landscape images will not exceed browser width
+
+                // Components                            
+                slide_links: 'blank',    // Individual links for each slide (Options: false, 'num', 'name', 'blank')
+                thumb_links: 1,            // Individual thumb links for each slide
+                thumbnail_navigation: 0,            // Thumbnail navigation
+                slides: [            // Slideshow Images
+                                                    { image: '/images/slider-img-1.jpg', title: 'Image Credit 1: Maria Kazvan' },
+                                                    { image: '/images/slider-img-2.jpg', title: 'Image Credit 2: Maria Kazvan' },
+                                                    { image: '/images/slider-img-3.jpg', title: 'Image Credit 3: Maria Kazvan' },
+                                                    { image: '/images/slider-img-4.jpg', title: 'Image Credit 4: Maria Kazvan' }
+                ],
+
+                // Theme Options               
+                progress_bar: 1,            // Timer for each slide                            
+                mouse_scrub: 0
+
+            });
+
+        });
+    </script>
+</body>
+</html>

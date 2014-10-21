@@ -18,27 +18,33 @@ body {
 	font-size: 13px;
 	line-height: 22px;
 }
+
 * {
 	margin:0;
 	padding:0;
 }
+
 p, ul, ol, dl, table, fieldset, blockquote, pre, code {
 	color:#666;
 }
+
 p {
 	font-family: 'Open Sans', sans-serif;
 	font-size: 15px;
 	line-height: 24px;
 }
+
 iframe {
 	width:100%;
 	border:none;
 }
+
 a {
 	outline:none;
 	text-decoration:none;
 	font-family: 'Viga', sans-serif;
 }
+
 h1, h2, h3, h4, h5 {
 	color: #333;
 	font-family: 'Viga', sans-serif;
@@ -46,6 +52,7 @@ h1, h2, h3, h4, h5 {
 	line-height: 100%;
 	margin-bottom: 10px;
 }
+
 h1 {
 	font-size:30px;
 	margin-bottom:30px;
@@ -687,4 +694,11 @@ ul.foodmenu li span.menu_item_price {
 
 .txt-busca {
     height: 23px;
+}
+
+#logout {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    color: #000 !important;
 }

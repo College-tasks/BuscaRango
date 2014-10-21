@@ -42,6 +42,13 @@
             </Scripts>
         </asp:ScriptManager>
 
+        <!-- Logout -->
+        <div id="logout">
+            Olá,&nbsp;
+            <asp:Label ID="lblUser" runat="server" Text="" Font-Bold="True"></asp:Label>
+             - <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click">Sair</asp:LinkButton>
+        </div>
+
         <!--Control Bar Start-->
         <div id="controls-wrapper" class="load-item">
             <div id="controls">
