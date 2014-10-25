@@ -21,15 +21,16 @@
             <!-- sidebar start..-->
             <div class="one-third-last">
                 <h3>
-                    <asp:Label ID="lblNome" runat="server" Text=""></asp:Label>
+                    <asp:Label ID="lblNome" runat="server"></asp:Label>
                 </h3>
                 <div class="text-container">
                     <p>
-                        <asp:Label ID="lblPreco" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblPreco" runat="server"></asp:Label>
                         <br />
                         <asp:HyperLink ID="hplEstab" runat="server"></asp:HyperLink>
                         <br />
-                        <asp:Label ID="lblDesc" runat="server" Text=""></asp:Label>
+                        <asp:Label ID="lblDesc" runat="server"></asp:Label>
+                        <br />
                     </p>
                 </div>
                 <div class="sidebar_container">
@@ -37,6 +38,14 @@
                     <ul>
                         <li>
                             <asp:Literal ID="litTeleEntrega" runat="server"></asp:Literal>
+                        </li>
+                    </ul>
+                </div>
+                <h3>Avaliações</h3>
+                <div class="text-container">
+                    <ul>
+                        <li>
+                            <asp:CheckBoxList ID="chkCaracteristicas" CssClass="" runat="server"></asp:CheckBoxList>
                         </li>
                     </ul>
                 </div>

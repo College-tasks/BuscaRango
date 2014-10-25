@@ -22,6 +22,7 @@ namespace BuscaRango
                 var prato = PratoService.SelectById(id);
                 if (prato.Sucesso && prato != null)
                 {
+                    CarregaTodasCaracteristicas();
                     DetalhesPrato = ((BR_Prato)(prato.RetObj));
                     hplEstab.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
                     hplEstab.NavigateUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
@@ -40,6 +41,18 @@ namespace BuscaRango
             {
                 Response.Redirect("~/Prato");
             }
+        }
+
+        /// <summary>
+        /// Carrega Características
+        /// </summary>
+        private void CarregaTodasCaracteristicas()
+        {
+            List<BR_Caracteristica_Prato> lst = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            chkCaracteristicas.DataSource = lst;
+            chkCaracteristicas.DataTextField = "Caracteristica";
+            chkCaracteristicas.DataValueField = "Id";
+            chkCaracteristicas.DataBind();
         }
     }
 }
