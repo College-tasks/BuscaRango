@@ -1,7 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="VerPrato.aspx.cs" Inherits="BuscaRango.VerPrato" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
-    <title>Busca Rango | Ver Prato</title>
+    <title>Busca Rango - Ver Prato</title>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
     <!--Container Start-->
