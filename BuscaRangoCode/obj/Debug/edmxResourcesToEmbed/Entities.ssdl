@@ -10,6 +10,7 @@
     <Property Name="Id_Usuario" Type="int" Nullable="false" />
     <Property Name="Id_Caracteristica" Type="int" Nullable="false" />
     <Property Name="Nota" Type="int" Nullable="false" />
+    <Property Name="Timestamp" Type="datetime" />
   </EntityType>
   <EntityType Name="BR_Avaliacao_Prato">
     <Key>
@@ -20,7 +21,8 @@
     <Property Name="Id_Prato" Type="int" Nullable="false" />
     <Property Name="Id_Usuario" Type="int" Nullable="false" />
     <Property Name="Id_Caracteristica" Type="int" Nullable="false" />
-    <Property Name="Nota" Type="int" Nullable="false" />
+    <Property Name="Nota" Type="float" Nullable="false" />
+    <Property Name="Timestamp" Type="datetime" />
   </EntityType>
   <EntityType Name="BR_Bairro">
     <Key>

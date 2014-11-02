@@ -17,7 +17,8 @@ namespace BuscaRangoCode
         public int Id_Prato { get; set; }
         public int Id_Usuario { get; set; }
         public int Id_Caracteristica { get; set; }
-        public int Nota { get; set; }
+        public double Nota { get; set; }
+        public Nullable<System.DateTime> Timestamp { get; set; }
     
         public virtual BR_Caracteristica_Prato BR_Caracteristica_Prato { get; set; }
         public virtual BR_Prato BR_Prato { get; set; }

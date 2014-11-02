@@ -175,6 +175,7 @@ namespace BuscaRangoCode
             {
                 try
                 {
+                    // Nova Query
                     var obj = from items in ctx.BR_Avaliacao_Prato.Include(x => x.BR_Caracteristica_Prato)
                                     .Where(x => x.Id_Prato == id)
                                     group items by items.BR_Caracteristica_Prato.Caracteristica into v
@@ -184,6 +185,39 @@ namespace BuscaRangoCode
                                   Nota = v.Average(items => items.Nota)
                               };
                     ret.RetObj = obj;
+                }
+                catch (Exception ex)
+                {
+                    ret.Sucesso = false;
+                    ret.MsgErro = ex.Message;
+                }
+            }
+
+            // Retorna o objeto de retorno
+            return ret;
+        }
+
+        public static Retorno SelectNotaByAvaliacao(int idPrato, int idCaracteristica)
+        {
+            // Cria objeto de retorno
+            Retorno ret = new Retorno();
+
+            // Usando o contexto ER_Entities, execute o bloco de código
+            using (var ctx = new ER_Entities())
+            {
+                try
+                {
+                    // Nova Query
+                    var obj = ctx.BR_Avaliacao_Prato.Where(x => x.Id_Prato == idPrato && x.Id_Caracteristica == idCaracteristica).Average(x => x.Nota);
+                    /*var obj = from items in ctx.BR_Avaliacao_Prato.Include(x => x.BR_Caracteristica_Prato)
+                                    .Where(x => x.Id_Prato == id)
+                                    group items by items.BR_Caracteristica_Prato.Caracteristica into v
+                              select new
+                              {
+                                  Caracteristica = v.Key,
+                                  Nota = v.Average(items => items.Nota)
+                              };*/
+                    ret.RetObj = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(obj)));
                 }
                 catch (Exception ex)
                 {

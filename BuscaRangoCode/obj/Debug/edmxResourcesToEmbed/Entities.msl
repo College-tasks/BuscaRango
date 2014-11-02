@@ -4,6 +4,7 @@
     <EntitySetMapping Name="BR_Avaliacao_Estabelecimento">
       <EntityTypeMapping TypeName="Entities_Namespace.BR_Avaliacao_Estabelecimento">
         <MappingFragment StoreEntitySet="BR_Avaliacao_Estabelecimento">
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
           <ScalarProperty Name="Id_Estabelecimento" ColumnName="Id_Estabelecimento" />
           <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
           <ScalarProperty Name="Id_Caracteristica" ColumnName="Id_Caracteristica" />
@@ -14,6 +15,7 @@
     <EntitySetMapping Name="BR_Avaliacao_Prato">
       <EntityTypeMapping TypeName="Entities_Namespace.BR_Avaliacao_Prato">
         <MappingFragment StoreEntitySet="BR_Avaliacao_Prato">
+          <ScalarProperty Name="Timestamp" ColumnName="Timestamp" />
           <ScalarProperty Name="Id_Prato" ColumnName="Id_Prato" />
           <ScalarProperty Name="Id_Usuario" ColumnName="Id_Usuario" />
           <ScalarProperty Name="Id_Caracteristica" ColumnName="Id_Caracteristica" />

@@ -24,7 +24,7 @@ namespace BuscaRango
                 var prato = PratoService.SelectById(Id);
                 if (prato.Sucesso && prato != null)
                 {
-                    CarregaCaracterirticas()
+                    CarregaCaracterirticas();
                     DetalhesPrato = ((BR_Prato)(prato.RetObj));
                     hplEstab.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
                     hplEstab.NavigateUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
@@ -43,19 +43,26 @@ namespace BuscaRango
             {
                 Response.Redirect("~/Prato");
             }
+
+            // Faltou dar um DataBind() no Repeater
+            var caracteristicas = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            rptCaracteristica.DataSource = caracteristicas;
+            rptCaracteristica.DataBind();
         }
 
         protected void rptCaracteristica_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
-            var avaliacao = (BR_Avaliacao_Prato)AvaliacaoPratoService.SelectAvaliacaoPratoById(Id).RetObj;
+            var caract = (BR_Caracteristica_Prato)e.Item.DataItem;
 
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
                 var lblCaracteristica = (Label)e.Item.FindControl("lblCaracteristica");
                 var rtrAvaliacao = (Rater)e.Item.FindControl("rtrAvaliacao");
 
-                lblCaracteristica.Text = avaliacao.BR_Caracteristica_Prato.Caracteristica;
-                rtrAvaliacao.Value = avaliacao.Nota;
+                lblCaracteristica.Text = caract.Caracteristica;
+                // Para verificar a média
+                var valor = AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj == null ? 0 : (int)AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj;
+                rtrAvaliacao.Value = valor;
 
             }
 
