@@ -67,12 +67,57 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Literal litTeleEntrega;
         
         /// <summary>
-        /// Controle chkCaracteristicas.
+        /// Controle udpAvaliacao.
         /// </summary>
         /// <remarks>
         /// Campo gerado automaticamente.
         /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.CheckBoxList chkCaracteristicas;
+        protected global::System.Web.UI.UpdatePanel udpAvaliacao;
+        
+        /// <summary>
+        /// Controle rptCaracteristica.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCaracteristica;
+        
+        /// <summary>
+        /// Controle udpAvaliacaoUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpAvaliacaoUsuario;
+        
+        /// <summary>
+        /// Controle ddlCaracteristicasUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.DropDownList ddlCaracteristicasUsuario;
+        
+        /// <summary>
+        /// Controle rtrAvaliacaoUsuario.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::ASPnetRater.Rater rtrAvaliacaoUsuario;
+        
+        /// <summary>
+        /// Controle lblResultado.
+        /// </summary>
+        /// <remarks>
+        /// Campo gerado automaticamente.
+        /// Modificar a declaração do campo de movimento do arquivo de designer para o arquivo code-behind.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label lblResultado;
     }
 }

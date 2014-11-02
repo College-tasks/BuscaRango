@@ -1,5 +1,7 @@
 ﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="VerPrato.aspx.cs" Inherits="BuscaRango.VerPrato" %>
 
+<%@ Register Namespace="ASPnetRater" Assembly="ASPnetRater" TagPrefix="cc1" %>
+
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <title>Busca Rango | Ver Prato</title>
 </asp:Content>
@@ -41,16 +43,57 @@
                         </li>
                     </ul>
                 </div>
-                <h3>Avaliações</h3>
-                <div class="text-container">
-                    <ul>
-                        <li>
-                            <asp:CheckBoxList ID="chkCaracteristicas" CssClass="" runat="server"></asp:CheckBoxList>
-                        </li>
-                    </ul>
+                <div class="sidebar_container">
+                    <h3>Avaliações</h3>
+                    <asp:UpdatePanel ID="udpAvaliacao" runat="server">
+                        <ContentTemplate>
+                            <div class="text-container">
+                                <ul>
+                                    <asp:Repeater ID="rptCaracteristica" runat="server" OnItemDataBound="rptCaracteristica_ItemDataBound">
+                                        <ItemTemplate>
+                                            <li>
+                                                <%--<%# Container.DataItem %>--%>
+                                                <asp:Label ID="lblCaracteristica" runat="server" Text="Label"></asp:Label>
+                                            </li>
+                                            <li>
+                                                <!-- Rating -->
+                                                <cc1:Rater ID="rtrAvaliacao" runat="server" Value='0' MaxValue="5"
+                                                    ImageOff="~/images/Rating/rating_grey_star.gif" ImageOn="~/images/Rating/rating_red_star.gif"
+                                                    ImageOver="~/images/Rating/rating_yellow_star.gif"></cc1:Rater>
+                                            </li>
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                </ul>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
                 </div>
+                <div class="sidebar_container">
+                    <h3>Avalie este prato!</h3>
+                    <asp:UpdatePanel ID="udpAvaliacaoUsuario" runat="server">
+                        <ContentTemplate>
+                            <div class="text-container">
+                                <ul>
+                                    <li>
+                                        <asp:DropDownList ID="ddlCaracteristicasUsuario" CssClass="" runat="server"></asp:DropDownList>
+                                    </li>
+                                    <li>
+                                        <!-- Rating -->
+                                        <cc1:Rater ID="rtrAvaliacaoUsuario" runat="server" Value='0' MaxValue="5" ToolTip="Avalie!"
+                                            ImageOff="~/images/Rating/rating_grey_star.gif" ImageOn="~/images/Rating/rating_red_star.gif"
+                                            ImageOver="~/images/Rating/rating_yellow_star.gif" CommandName='EditItem' OnCommand="RaterAvaliacaoUsuario_Command"></cc1:Rater>
+                                    </li>
+                                    <li>
+                                        <!-- Resultado -->
+                                        <asp:Label ID="lblResultado" runat="server" Visible="False" Text=""></asp:Label>
+                                    </li>
+                                </ul>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <div class="clear"></div>
             </div>
-            <div class="clear"></div>
         </section>
     </section>
     <!--Container End-->
