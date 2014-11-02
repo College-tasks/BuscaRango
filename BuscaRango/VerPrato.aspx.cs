@@ -24,7 +24,7 @@ namespace BuscaRango
                 var prato = PratoService.SelectById(Id);
                 if (prato.Sucesso && prato != null)
                 {
-                    CarregaCaracterirticas()
+                    CarregaCaracterirticas();
                     DetalhesPrato = ((BR_Prato)(prato.RetObj));
                     hplEstab.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
                     hplEstab.NavigateUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
