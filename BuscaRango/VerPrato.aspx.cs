@@ -91,6 +91,8 @@ namespace BuscaRango
             obj.Id_Caracteristica = idCarac;
             obj.Id_Prato = idPrato;
             obj.Id_Usuario = idUsuario;
+            obj.Nota = rtrAvaliacaoUsuario.Value;
+            obj.Timestamp = DateTime.Now;
 
             AvaliacaoPratoService.Insert(obj);
         }
