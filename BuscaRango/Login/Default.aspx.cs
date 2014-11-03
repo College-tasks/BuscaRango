@@ -22,6 +22,8 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
+            FormsAuthentication.RedirectFromLoginPage("52.marcos.vinicius@gmail.com", true);
+
             if (!String.IsNullOrEmpty(Request.Params["logout"]))
             {
                 FormsAuthentication.SignOut();

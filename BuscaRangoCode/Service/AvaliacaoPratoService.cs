@@ -175,16 +175,18 @@ namespace BuscaRangoCode
             {
                 try
                 {
+                    /*
                     // Nova Query
                     var obj = from items in ctx.BR_Avaliacao_Prato.Include(x => x.BR_Caracteristica_Prato)
                                     .Where(x => x.Id_Prato == id)
                                     group items by items.BR_Caracteristica_Prato.Caracteristica into v
-                              select new
+                              select new BR_Avaliacao_Prato
                               {
                                   Caracteristica = v.Key,
                                   Nota = v.Average(items => items.Nota)
                               };
-                    ret.RetObj = obj;
+                     */
+                    ret.RetObj = null;
                 }
                 catch (Exception ex)
                 {
@@ -217,7 +219,7 @@ namespace BuscaRangoCode
                                   Caracteristica = v.Key,
                                   Nota = v.Average(items => items.Nota)
                               };*/
-                    ret.RetObj = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(obj)));
+                    ret.RetObj = Convert.ToDouble(obj);
                 }
                 catch (Exception ex)
                 {

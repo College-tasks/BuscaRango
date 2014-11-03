@@ -58,11 +58,14 @@ namespace BuscaRango
             {
                 var lblCaracteristica = (Label)e.Item.FindControl("lblCaracteristica");
                 var rtrAvaliacao = (Rater)e.Item.FindControl("rtrAvaliacao");
+                var lblNota = (Label)e.Item.FindControl("lblNota");
 
                 lblCaracteristica.Text = caract.Caracteristica;
                 // Para verificar a média
-                var valor = AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj == null ? 0 : (int)AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj;
-                rtrAvaliacao.Value = valor;
+                var valor = AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj == null ? 0 : (double)AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj;
+                var valorInt = Convert.ToInt32(Math.Ceiling(valor));
+                rtrAvaliacao.Value = valorInt;
+                lblNota.Text = valor.ToString();
 
             }
 
@@ -80,24 +83,16 @@ namespace BuscaRango
         protected void RaterAvaliacaoUsuario_Command(object sender, CommandEventArgs e)
         {
             var obj = new BR_Avaliacao_Prato();
-            var idUsuario = (BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj;
-            var avaliacao = (BR_Avaliacao_Prato)AvaliacaoPratoService.SelectAvaliacaoPratoById(Id).RetObj;
-            if (avaliacao != null)
-            {
-                obj.Id_Prato = Id;
-                obj.Id_Caracteristica = ddlCaracteristicasUsuario.SelectedIndex;
-                obj.Id_Usuario = idUsuario.Id;
-                obj.Nota = rtrAvaliacaoUsuario.Value;
-                AvaliacaoPratoService.Update(obj, Id);
-            }
-            else
-            {
-                obj.Id_Prato = Id;
-                obj.Id_Caracteristica = ddlCaracteristicasUsuario.SelectedIndex;
-                obj.Id_Usuario = idUsuario.Id;
-                obj.Nota = rtrAvaliacaoUsuario.Value;
-                AvaliacaoPratoService.Insert(obj);
-            }
+
+            var idCarac = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
+            var idUsuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
+            var idPrato = Id;
+
+            obj.Id_Caracteristica = idCarac;
+            obj.Id_Prato = idPrato;
+            obj.Id_Usuario = idUsuario;
+
+            AvaliacaoPratoService.Insert(obj);
         }
 
     }

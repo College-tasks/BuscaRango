@@ -249,7 +249,7 @@ namespace BuscaRangoCode
                 try
                 {
                     // Recebe o primeiro objeto da lista de Entidades que possui a expressão especificada
-                    var obj = ctx.BR_Usuario.FirstOrDefault(x => x.Nome == nome);
+                    var obj = ctx.BR_Usuario.FirstOrDefault(x => x.Email == nome);
                     ret.RetObj = obj;
                 }
                 catch (Exception ex)

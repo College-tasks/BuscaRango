@@ -60,6 +60,7 @@
                                                 <cc1:Rater ID="rtrAvaliacao" runat="server" Value='0' MaxValue="5" Enabled="false"
                                                     ImageOff="~/images/Rating/rating_grey_star.gif" ImageOn="~/images/Rating/rating_red_star.gif"
                                                     ImageOver="~/images/Rating/rating_yellow_star.gif"></cc1:Rater>
+                                                <asp:Label ID="lblNota" runat="server" Text="Label"></asp:Label>
                                             </li>
                                         </ItemTemplate>
                                     </asp:Repeater>
