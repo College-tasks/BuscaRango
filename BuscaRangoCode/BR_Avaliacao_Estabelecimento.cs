@@ -18,6 +18,7 @@ namespace BuscaRangoCode
         public int Id_Usuario { get; set; }
         public int Id_Caracteristica { get; set; }
         public int Nota { get; set; }
+        public System.DateTime Timestamp { get; set; }
     
         public virtual BR_Caracteristica_Estabelecimento BR_Caracteristica_Estabelecimento { get; set; }
         public virtual BR_Estabelecimento BR_Estabelecimento { get; set; }

@@ -5,6 +5,7 @@
       <PropertyRef Name="Id_Estabelecimento" />
       <PropertyRef Name="Id_Usuario" />
       <PropertyRef Name="Id_Caracteristica" />
+      <PropertyRef Name="Timestamp" />
     </Key>
     <Property Name="Id_Estabelecimento" Type="Int32" Nullable="false" />
     <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
@@ -13,12 +14,14 @@
     <NavigationProperty Name="BR_Caracteristica_Estabelecimento" Relationship="Self.BR_Caracteristica_Estabelecimento_BR_Avaliacao_Estabelecimento_FK1" FromRole="BR_Avaliacao_Estabelecimento" ToRole="BR_Caracteristica_Estabelecimento" />
     <NavigationProperty Name="BR_Estabelecimento" Relationship="Self.BR_Estabelecimento_BR_Avaliacao_Estabelecimento_FK1" FromRole="BR_Avaliacao_Estabelecimento" ToRole="BR_Estabelecimento" />
     <NavigationProperty Name="BR_Usuario" Relationship="Self.BR_Usuario_BR_Avaliacao_Estabelecimento_FK1" FromRole="BR_Avaliacao_Estabelecimento" ToRole="BR_Usuario" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <EntityType Name="BR_Avaliacao_Prato">
     <Key>
       <PropertyRef Name="Id_Prato" />
       <PropertyRef Name="Id_Usuario" />
       <PropertyRef Name="Id_Caracteristica" />
+      <PropertyRef Name="Timestamp" />
     </Key>
     <Property Name="Id_Prato" Type="Int32" Nullable="false" />
     <Property Name="Id_Usuario" Type="Int32" Nullable="false" />
@@ -27,6 +30,7 @@
     <NavigationProperty Name="BR_Caracteristica_Prato" Relationship="Self.BR_Caracteristica_Prato_BR_Avaliacao_Prato_FK1" FromRole="BR_Avaliacao_Prato" ToRole="BR_Caracteristica_Prato" />
     <NavigationProperty Name="BR_Prato" Relationship="Self.BR_Prato_BR_Avaliacao_Prato_FK1" FromRole="BR_Avaliacao_Prato" ToRole="BR_Prato" />
     <NavigationProperty Name="BR_Usuario" Relationship="Self.BR_Usuario_BR_Avaliacao_Prato_FK1" FromRole="BR_Avaliacao_Prato" ToRole="BR_Usuario" />
+    <Property Name="Timestamp" Type="DateTime" Nullable="false" Precision="3" />
   </EntityType>
   <EntityType Name="BR_Bairro">
     <Key>
