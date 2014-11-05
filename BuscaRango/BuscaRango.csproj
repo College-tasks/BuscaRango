@@ -38,6 +38,9 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="ASPnetRater">
+      <HintPath>..\..\..\..\..\Downloads\ASPnetRater_example\ASPnetRater\bin\Debug\ASPnetRater.dll</HintPath>
+    </Reference>
     <Reference Include="aspsnippets.facebookapi">
       <HintPath>..\..\..\..\..\Downloads\FaceBookLogin\Bin\aspsnippets.facebookapi.dll</HintPath>
     </Reference>

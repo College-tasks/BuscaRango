@@ -7,3 +7,4 @@ C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.dll
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.pdb
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.csprojResolveAssemblyReference.cache

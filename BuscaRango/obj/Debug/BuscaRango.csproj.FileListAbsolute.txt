@@ -10,3 +10,5 @@ C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\EntityFra
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\ASPnetRater.dll
+C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\ASPnetRater.pdb
