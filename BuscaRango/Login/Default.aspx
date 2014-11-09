@@ -15,11 +15,11 @@
                     <div class="container">
                         <div class="form-signin">
                             <h1 class="form-signin-heading">Busca Rango</h1>
-                            <asp:TextBox ID="txtEmail" runat="server" required></asp:TextBox>
+                            <asp:TextBox ID="txtEmail" runat="server"></asp:TextBox>
                             <br />
-                            <asp:TextBox ID="txtPass" type="password" runat="server" required></asp:TextBox>
+                            <asp:TextBox ID="txtPass" type="password" runat="server"></asp:TextBox>
                             <br />
-                            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                            <asp:Button ID="btnLogin" CssClass="btn-login" runat="server" Text="Login" OnClick="btnLogin_Click" />
                             <br />
                             <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
                             <br />

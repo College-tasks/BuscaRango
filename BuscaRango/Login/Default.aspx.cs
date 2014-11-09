@@ -72,13 +72,20 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void btnLogin_Click(object sender, EventArgs e)
         {
-            if (ValidaUsuario(txtEmail.Text, txtPass.Text))
+            if (txtEmail.Text.Equals(String.Empty) || txtPass.Text.Equals(String.Empty))
             {
-                FormsAuthentication.RedirectFromLoginPage(txtEmail.Text, true);
+                lblMsg.Text = "Preencha todos campos!";
             }
             else
             {
-                lblMsg.Text = "Email e/ou usuário inválido!";
+                if (ValidaUsuario(txtEmail.Text, txtPass.Text))
+                {
+                    FormsAuthentication.RedirectFromLoginPage(txtEmail.Text, true);
+                }
+                else
+                {
+                    lblMsg.Text = "Email e/ou usuário inválido!";
+                }
             }
         }
 
