@@ -1,28 +1,58 @@
-﻿body {
-}
-
-.facebook_button {
+﻿.facebook_button {
     display: inline-block;
-
     background: #627aac url(facebook_small.png) left no-repeat;
-
     border-top: 1px solid #29447e;
     border-right: 1px solid #29447e;
     border-bottom: 1px solid #1a356e;
     border-left: none;
-
-    height: 22px;
-
+    height: 30px;
     padding-right: 7px;
     padding-left: 29px;
-
     font-weight: bold;
     font-size: 11px;
     color: white;
     text-decoration: none;
     font-family: "lucida grande", tahoma, verdana, arial, sans-serif;
     line-height: 22px;
-
     cursor: pointer;
+    width: 100%;
+}
 
+body {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    background-color: #f5f5f5;
+}
+
+.form-signin {
+    width: 300px;
+    padding: 19px 29px 29px;
+    margin: 0 auto 20px;
+    background-color: #fff;
+    border: 1px solid #e5e5e5;
+}
+
+    .form-signin .form-signin-heading,
+    .form-signin .checkbox {
+        margin-bottom: 10px;
+    }
+
+    .form-signin input[type="text"],
+    .form-signin input[type="password"] {
+        font-size: 16px;
+        height: 30px;
+        width: 300px;
+        margin-bottom: 15px;
+    }
+
+.form-signin-heading {
+    text-align: center;
+    color: #333;
+    font-family: 'Viga', sans-serif;
+}
+
+.btn-login {
+    width: 300px;
+    height: 30px;
+    font-size: 17px;
 }
