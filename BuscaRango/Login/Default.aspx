@@ -12,17 +12,20 @@
         <asp:ScriptManager ID="ScriptManager1" runat="server"></asp:ScriptManager>
         <asp:UpdatePanel ID="upLogin" runat="server">
             <ContentTemplate>
-                <div>
-                    <asp:TextBox ID="txtEmail" runat="server" required></asp:TextBox>
-                    <br />
-                    <asp:TextBox ID="txtPass" type="password" runat="server" required></asp:TextBox>
-                    <br />
-                    <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
-                    <br />
-                    <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
-                    <br />
-                    <asp:Button ID="btnFacebook" runat="server" Text="Logar com o Facebook" CssClass="facebook_button" OnClick="btnFacebook_Click" />
-                </div>
+                    <div class="container">
+                        <div class="form-signin">
+                            <h1 class="form-signin-heading">Busca Rango</h1>
+                            <asp:TextBox ID="txtEmail" runat="server" required></asp:TextBox>
+                            <br />
+                            <asp:TextBox ID="txtPass" type="password" runat="server" required></asp:TextBox>
+                            <br />
+                            <asp:Button ID="btnLogin" runat="server" Text="Login" OnClick="btnLogin_Click" />
+                            <br />
+                            <asp:Label ID="lblMsg" runat="server" ForeColor="Red"></asp:Label>
+                            <br />
+                            <asp:Button ID="btnFacebook" runat="server" Text="Logar com o Facebook" CssClass="facebook_button" OnClick="btnFacebook_Click" />
+                        </div>
+                    </div>
             </ContentTemplate>
         </asp:UpdatePanel>
     </form>
