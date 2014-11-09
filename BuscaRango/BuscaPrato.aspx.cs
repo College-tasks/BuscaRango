@@ -58,6 +58,7 @@ namespace BuscaRango
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
+                CarregaCaracterirticas();
                 var prato = (BR_Prato)e.Item.DataItem;
                 var nome = (Label)e.Item.FindControl("lblNome");
                 var estabelecimento = (HyperLink)e.Item.FindControl("hplEstab");
@@ -186,6 +187,64 @@ namespace BuscaRango
             chkTags.DataTextField = "Tag";
             chkTags.DataValueField = "Id";
             chkTags.DataBind();
+        }
+        protected void ddlBuscaOrdenada_OnLoad(object sender, EventArgs e)
+        {
+            if (!Page.IsPostBack)
+            {
+                ddlBuscaOrdenada.Items.Insert(0, "Orderar por");
+                ddlBuscaOrdenada.Items.Insert(1, "Maior Preço");
+                ddlBuscaOrdenada.Items.Insert(2, "Menor Preço");
+                ddlBuscaOrdenada.Items.Insert(3, "Nome A-Z");
+                ddlBuscaOrdenada.Items.Insert(4, "Nome Z-A");
+                ddlBuscaOrdenada.SelectedIndex = 0;
+            }
+        }
+
+        protected void ddlBuscaOrdenada_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            //Maior Preço
+            if (ddlBuscaOrdenada.SelectedIndex == 1)
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]).OrderByDescending(x => x.Preco).ToList();
+            }
+
+            //Menor Preço
+            if (ddlBuscaOrdenada.SelectedIndex == 2)
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]).OrderBy(x => x.Preco).ToList();
+            }
+
+            //Nome A-Z
+            if (ddlBuscaOrdenada.SelectedIndex == 3)
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]).OrderBy(x => x.Nome).ToList();
+            }
+
+            //Nome Z-A
+            if (ddlBuscaOrdenada.SelectedIndex == 4)
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]).OrderByDescending(x => x.Nome).ToList();
+            }
+            CarregaPratosFiltrados();
+        }
+
+        private void CarregaCaracterirticas()
+        {
+            var lst = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            ddlCaracteristicas.DataSource = lst;
+            ddlCaracteristicas.DataTextField = "Caracteristica";
+            ddlCaracteristicas.DataValueField = "Id";
+            ddlCaracteristicas.DataBind();
+        }
+
+        protected void ddlCaracteristicas_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
+                .OrderByDescending(x => x.BR_Avaliacao_Prato
+                    .Where(y => y.Id_Caracteristica == Convert.ToInt32(ddlCaracteristicas.SelectedValue))
+                    .Average(y => y.Nota)).ToList();
+            CarregaPratosFiltrados();
         }
     }
 }
