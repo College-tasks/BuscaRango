@@ -170,6 +170,8 @@ namespace BuscaRango
             txtPrecoAte.Text = "";
             txtPrecoDe.Text = "";
             chkEntrega.Checked = false;
+            ddlBuscaOrdenada.SelectedIndex = 0;
+            ddlCaracteristicas.SelectedIndex = 0;
 
             foreach (ListItem item in chkTags.Items)
             {
@@ -199,10 +201,18 @@ namespace BuscaRango
                 ddlBuscaOrdenada.Items.Insert(4, "Nome Z-A");
                 ddlBuscaOrdenada.SelectedIndex = 0;
             }
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         protected void ddlBuscaOrdenada_OnSelectedIndexChanged(object sender, EventArgs e)
         {
+            // Default
+            if (ddlBuscaOrdenada.SelectedIndex == 0)
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]);
+            }
+
             //Maior Preço
             if (ddlBuscaOrdenada.SelectedIndex == 1)
             {
@@ -226,12 +236,18 @@ namespace BuscaRango
             {
                 LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]).OrderByDescending(x => x.Nome).ToList();
             }
+
             CarregaPratosFiltrados();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         private void CarregaCaracterirticas()
         {
-            var lst = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            List<BR_Caracteristica_Prato> lst = new List<BR_Caracteristica_Prato>();
+            lst.Add(new BR_Caracteristica_Prato(){ Caracteristica = "= Característica =", Id = 0 });
+            lst.AddRange((List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj);
+
             ddlCaracteristicas.DataSource = lst;
             ddlCaracteristicas.DataTextField = "Caracteristica";
             ddlCaracteristicas.DataValueField = "Id";
@@ -240,11 +256,22 @@ namespace BuscaRango
 
         protected void ddlCaracteristicas_OnSelectedIndexChanged(object sender, EventArgs e)
         {
-            LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
+            if (ddlCaracteristicas.SelectedValue.Equals("0"))
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"]);
+            }
+            else
+            {
+                LstPratosFiltrados = ((List<BR_Prato>)Session["Data"])
                 .OrderByDescending(x => x.BR_Avaliacao_Prato
                     .Where(y => y.Id_Caracteristica == Convert.ToInt32(ddlCaracteristicas.SelectedValue))
+                    .DefaultIfEmpty(new BR_Avaliacao_Prato() { Nota = 0 })
                     .Average(y => y.Nota)).ToList();
+            }
+
             CarregaPratosFiltrados();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
     }
 }
