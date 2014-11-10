@@ -367,19 +367,16 @@ ul.foodmenu li span.menu_item_price {
     -moz-border-right-colors: none;
     -moz-border-top-colors: none;
     border-color: transparent transparent -moz-use-text-color;
-    border-image: none;
     border-style: solid;
-    border-width: 1px;
+    border-width: 0px;
     color: #009900 !important;
-    cursor: pointer;
     display: inline !important;
     float: none;
     font-weight: normal;
     list-style: none outside none;
     margin: 0;
     padding: 0;
-    text-align: left;
-    text-decoration: underline;}
+    text-align: left;}
 
 /* 9.DRAGGABLE SLIDER GENERAL STYLE 
 ------------------------------------------------------*/

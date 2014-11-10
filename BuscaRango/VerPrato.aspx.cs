@@ -17,10 +17,11 @@ namespace BuscaRango
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
-
-            if (Id > 0)
+            if (!IsPostBack)
             {
+                if (Page.RouteData.Values["idPrato"].ToString() == null) Response.Redirect("~/Prato");
+                Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
+
                 var prato = PratoService.SelectById(Id);
                 if (prato.Sucesso && prato != null)
                 {
@@ -33,21 +34,13 @@ namespace BuscaRango
                     lblDesc.Text = DetalhesPrato.Descricao;
                     lblPreco.Text = "R$ " + DetalhesPrato.Preco;
                     litTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
+                    CarregaAvaliacoes();
                 }
                 else
                 {
                     Response.Redirect("~/Prato");
                 }
             }
-            else
-            {
-                Response.Redirect("~/Prato");
-            }
-
-            // Faltou dar um DataBind() no Repeater
-            var caracteristicas = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
-            rptCaracteristica.DataSource = caracteristicas;
-            rptCaracteristica.DataBind();
         }
 
         protected void rptCaracteristica_ItemDataBound(object sender, RepeaterItemEventArgs e)
@@ -65,7 +58,7 @@ namespace BuscaRango
                 var valor = AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj == null ? 0 : (double)AvaliacaoPratoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj;
                 var valorInt = Convert.ToInt32(Math.Ceiling(valor));
                 rtrAvaliacao.Value = valorInt;
-                lblNota.Text = valor.ToString();
+                lblNota.Text = "Média:" + valor.ToString("0.##");
 
             }
 
@@ -73,18 +66,38 @@ namespace BuscaRango
 
         private void CarregaCaracterirticas()
         {
-            var lst = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            List<BR_Caracteristica_Prato> lst = new List<BR_Caracteristica_Prato>();
+            lst.Add(new BR_Caracteristica_Prato(){ Id = 0, Caracteristica = "= Selecione ="});
+
+            lst.AddRange((List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj);
             ddlCaracteristicasUsuario.DataSource = lst;
             ddlCaracteristicasUsuario.DataTextField = "Caracteristica";
             ddlCaracteristicasUsuario.DataValueField = "Id";
             ddlCaracteristicasUsuario.DataBind();
+            ddlCaracteristicasUsuario.SelectedIndex = 0;
+
+            if (ddlCaracteristicasUsuario.SelectedIndex != 0)
+            {
+                //ViewState["idCarac"] = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
+            }
+            ViewState["idCarac"] = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
+        }
+
+        private void CarregaAvaliacoes()
+        {
+            // Faltou dar um DataBind() no Repeater
+            var caracteristicas = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
+            rptCaracteristica.DataSource = caracteristicas;
+            rptCaracteristica.DataBind();
         }
 
         protected void RaterAvaliacaoUsuario_Command(object sender, CommandEventArgs e)
         {
             var obj = new BR_Avaliacao_Prato();
 
-            var idCarac = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
+            Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
+
+            var idCarac = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue.ToString());
             var idUsuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
             var idPrato = Id;
 
@@ -95,6 +108,9 @@ namespace BuscaRango
             obj.Timestamp = DateTime.Now;
 
             AvaliacaoPratoService.Insert(obj);
+
+            rtrAvaliacaoUsuario.Value = 0;
+            CarregaAvaliacoes();
         }
 
     }

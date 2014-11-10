@@ -62,6 +62,7 @@
                                                     ImageOver="~/images/Rating/rating_yellow_star.gif"></cc1:Rater>
                                                 <asp:Label ID="lblNota" runat="server" Text="Label"></asp:Label>
                                             </li>
+                                            <hr />
                                         </ItemTemplate>
                                     </asp:Repeater>
                                 </ul>
