@@ -184,6 +184,10 @@
     <Content Include="images\prettyPhoto\light_square\btnNext.png" />
     <Content Include="images\prettyPhoto\light_square\btnPrevious.png" />
     <Content Include="images\prettyPhoto\light_square\sprite.png" />
+    <Content Include="images\Rating\rating_grey_star.gif" />
+    <Content Include="images\Rating\rating_red_star.gif" />
+    <Content Include="images\Rating\rating_yellow_star.gif" />
+    <Content Include="images\Rating\star-rating.png" />
     <Content Include="images\slider-img-1.jpg" />
     <Content Include="images\slider-img-2.jpg" />
     <Content Include="images\slider-img-3.jpg" />
@@ -302,6 +306,7 @@
       <Name>BuscaRangoCode</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup />
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
