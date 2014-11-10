@@ -38,6 +38,9 @@
                         <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
                         <asp:TextBox ID="txtPrecoDe" runat="server" placeholder="Preço DE" type="number" step="any" CssClass="txt-busca"></asp:TextBox>
                         <asp:TextBox ID="txtPrecoAte" runat="server" placeholder="Preço ATÉ" type="number" step="any" CssClass="txt-busca"></asp:TextBox>
+                        <asp:DropDownList AutoPostBack="True" ID="ddlBuscaOrdenada" OnLoad="ddlBuscaOrdenada_OnLoad" OnSelectedIndexChanged="ddlBuscaOrdenada_OnSelectedIndexChanged" runat="server" />
+                        <asp:Label runat="server" Text="Ordenação por avaliações: "></asp:Label>
+                        <asp:DropDownList ID="ddlCaracteristicas" CssClass="" runat="server" OnSelectedIndexChanged="ddlCaracteristicas_OnSelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                         <asp:CheckBox ID="chkEntrega" runat="server" Text=" Possui Entrega " />
                         <div style="height: 75px; overflow: auto;">
                             <asp:CheckBoxList ID="chkTags" runat="server"></asp:CheckBoxList>
