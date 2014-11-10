@@ -19,7 +19,7 @@ namespace BuscaRango
         {
             if (!IsPostBack)
             {
-                if (Page.RouteData.Values["idPrato"].ToString() == null) Response.Redirect("~/Prato");
+                if (Page.RouteData.Values.Count < 1) Response.Redirect("~/Prato");
                 Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
 
                 var prato = PratoService.SelectById(Id);
@@ -67,7 +67,7 @@ namespace BuscaRango
         private void CarregaCaracterirticas()
         {
             List<BR_Caracteristica_Prato> lst = new List<BR_Caracteristica_Prato>();
-            lst.Add(new BR_Caracteristica_Prato(){ Id = 0, Caracteristica = "= Selecione ="});
+            lst.Add(new BR_Caracteristica_Prato() { Id = 0, Caracteristica = "= Selecione =" });
 
             lst.AddRange((List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj);
             ddlCaracteristicasUsuario.DataSource = lst;
@@ -75,12 +75,6 @@ namespace BuscaRango
             ddlCaracteristicasUsuario.DataValueField = "Id";
             ddlCaracteristicasUsuario.DataBind();
             ddlCaracteristicasUsuario.SelectedIndex = 0;
-
-            if (ddlCaracteristicasUsuario.SelectedIndex != 0)
-            {
-                //ViewState["idCarac"] = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
-            }
-            ViewState["idCarac"] = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue);
         }
 
         private void CarregaAvaliacoes()

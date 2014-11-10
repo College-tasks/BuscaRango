@@ -166,8 +166,17 @@ namespace BuscaRangoCode
             {
                 try
                 {
+                    // Nova Query
                     var obj = ctx.BR_Avaliacao_Estabelecimento.Where(x => x.Id_Estabelecimento == idEstabelecimento && x.Id_Caracteristica == idCaracteristica).Average(x => x.Nota);
-                    ret.RetObj = Convert.ToInt32(Math.Ceiling(Convert.ToDouble(obj)));
+                    /*var obj = from items in ctx.BR_Avaliacao_Prato.Include(x => x.BR_Caracteristica_Prato)
+                                    .Where(x => x.Id_Prato == id)
+                                    group items by items.BR_Caracteristica_Prato.Caracteristica into v
+                              select new
+                              {
+                                  Caracteristica = v.Key,
+                                  Nota = v.Average(items => items.Nota)
+                              };*/
+                    ret.RetObj = Convert.ToDouble(obj);
                 }
                 catch (Exception ex)
                 {

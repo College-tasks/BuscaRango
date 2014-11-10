@@ -1,4 +1,5 @@
-﻿using BuscaRangoCode;
+﻿using ASPnetRater;
+using BuscaRangoCode;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -11,17 +12,19 @@ namespace BuscaRango
     public partial class VerEstabelecimento : System.Web.UI.Page
     {
         public BR_Estabelecimento DetalhesEstab;
+        public int Id = 0;
 
         protected void Page_Load(object sender, EventArgs e)
         {
-            int id = 0;
-            Int32.TryParse(Page.RouteData.Values["idEstabelecimento"].ToString(), out id);
-
-            if (id > 0)
+            if (!IsPostBack)
             {
-                var estab = EstabelecimentoService.SelectById(id);
+                if (Page.RouteData.Values.Count < 1) Response.Redirect("~/Lugar");
+                Int32.TryParse(Page.RouteData.Values["IdEstabelecimento"].ToString(), out Id);
+                var estab = EstabelecimentoService.SelectById(Id);
+
                 if (estab.Sucesso && estab != null)
                 {
+                    CarregaCaracterirticas();
                     DetalhesEstab = ((BR_Estabelecimento)(estab.RetObj));
                     img.ImageUrl = "~/Images/Estabelecimento/" + DetalhesEstab.BR_Fotos_Estabelecimento.First().Imagem;
                     lblNome.Text = DetalhesEstab.Razao_Social;
@@ -39,15 +42,13 @@ namespace BuscaRango
 
                     rptDados.DataSource = DetalhesEstab.BR_Prato;
                     rptDados.DataBind();
+
+                    CarregaAvaliacoes();
                 }
                 else
                 {
-                    Response.Redirect("~/Estabelecimento");
+                    Response.Redirect("~/Lugar");
                 }
-            }
-            else
-            {
-                Response.Redirect("~/Estabelecimento");
             }
         }
 
@@ -76,6 +77,71 @@ namespace BuscaRango
                 img.ImageUrl = "~/Images/Prato/" + prato.Imagem;
 
             }
+        }
+
+        // Características
+        protected void rptCaracteristica_ItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            var caract = (BR_Caracteristica_Estabelecimento)e.Item.DataItem;
+
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var lblCaracteristica = (Label)e.Item.FindControl("lblCaracteristica");
+                var rtrAvaliacao = (Rater)e.Item.FindControl("rtrAvaliacao");
+                var lblNota = (Label)e.Item.FindControl("lblNota");
+
+                lblCaracteristica.Text = caract.Caracteristica;
+                // Para verificar a média
+                var valor = AvaliacaoEstabelecimentoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj == null ? 0 : (double)AvaliacaoEstabelecimentoService.SelectNotaByAvaliacao(Id, caract.Id).RetObj;
+                var valorInt = Convert.ToInt32(Math.Ceiling(valor));
+                rtrAvaliacao.Value = valorInt;
+                lblNota.Text = "Média:" + valor.ToString("0.##");
+
+            }
+
+        }
+
+        private void CarregaCaracterirticas()
+        {
+            List<BR_Caracteristica_Estabelecimento> lst = new List<BR_Caracteristica_Estabelecimento>();
+            lst.Add(new BR_Caracteristica_Estabelecimento() { Id = 0, Caracteristica = "= Selecione =" });
+
+            lst.AddRange((List<BR_Caracteristica_Estabelecimento>)CaracteristicaEstabelecimentoService.SelectAll().RetObj);
+            ddlCaracteristicasUsuario.DataSource = lst;
+            ddlCaracteristicasUsuario.DataTextField = "Caracteristica";
+            ddlCaracteristicasUsuario.DataValueField = "Id";
+            ddlCaracteristicasUsuario.DataBind();
+            ddlCaracteristicasUsuario.SelectedIndex = 0;
+        }
+
+        private void CarregaAvaliacoes()
+        {
+            // Faltou dar um DataBind() no Repeater
+            var caracteristicas = (List<BR_Caracteristica_Estabelecimento>)CaracteristicaEstabelecimentoService.SelectAll().RetObj;
+            rptCaracteristica.DataSource = caracteristicas;
+            rptCaracteristica.DataBind();
+        }
+
+        protected void RaterAvaliacaoUsuario_Command(object sender, CommandEventArgs e)
+        {
+            var obj = new BR_Avaliacao_Estabelecimento();
+
+            Int32.TryParse(Page.RouteData.Values["IdEstabelecimento"].ToString(), out Id);
+
+            var idCarac = Int32.Parse(ddlCaracteristicasUsuario.SelectedValue.ToString());
+            var idUsuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
+            var idEstab = Id;
+
+            obj.Id_Caracteristica = idCarac;
+            obj.Id_Estabelecimento = idEstab;
+            obj.Id_Usuario = idUsuario;
+            obj.Nota = rtrAvaliacaoUsuario.Value;
+            obj.Timestamp = DateTime.Now;
+
+            AvaliacaoEstabelecimentoService.Insert(obj);
+
+            rtrAvaliacaoUsuario.Value = 0;
+            CarregaAvaliacoes();
         }
     }
 }
