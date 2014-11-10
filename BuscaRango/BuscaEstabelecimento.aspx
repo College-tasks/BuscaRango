@@ -36,6 +36,8 @@
                     <!--Busca Avançada-->
                     <div id="busca-avancada">
                         <asp:TextBox ID="txtBuscaDescricao" runat="server" placeholder="Busca por descrição" CssClass="txt-busca"></asp:TextBox>
+                        <asp:Label ID="Label1" runat="server" Text="Ordenação por avaliações: "></asp:Label>
+                        <asp:DropDownList ID="ddlCaracteristicas" CssClass="" runat="server" OnSelectedIndexChanged="ddlCaracteristicas_OnSelectedIndexChanged" AutoPostBack="True"></asp:DropDownList>
                         <asp:CheckBox ID="chkAbreSegunda" runat="server" Text=" Abre Segunda " />
                         <asp:CheckBox ID="chkAbreDomingo" runat="server" Text=" Abre Domingo " />
                         <asp:CheckBox ID="chkAbreSabado" runat="server" Text=" Abre Sábado " />

@@ -31,6 +31,7 @@ namespace BuscaRango
                     CarregaEstabelecimentos();
                     Session["DataE"] = lstEstabelecimentos;
                     CarregaTags();
+                    CarregaCaracterirticas();
                 }
                 else
                 {
@@ -225,6 +226,7 @@ namespace BuscaRango
             this.chkFraldario.Checked = false;
             this.chkMusica.Checked = false;
             this.chkTemReserva.Checked = false;
+            ddlCaracteristicas.SelectedIndex = 0;
 
             foreach (ListItem item in chkTags.Items)
             {
@@ -242,6 +244,38 @@ namespace BuscaRango
             chkTags.DataTextField = "Tag";
             chkTags.DataValueField = "Id";
             chkTags.DataBind();
+        }
+
+        private void CarregaCaracterirticas()
+        {
+            List<BR_Caracteristica_Estabelecimento> lst = new List<BR_Caracteristica_Estabelecimento>();
+            lst.Add(new BR_Caracteristica_Estabelecimento() { Caracteristica = "= Característica =", Id = 0 });
+            lst.AddRange((List<BR_Caracteristica_Estabelecimento>)CaracteristicaEstabelecimentoService.SelectAll().RetObj);
+
+            ddlCaracteristicas.DataSource = lst;
+            ddlCaracteristicas.DataTextField = "Caracteristica";
+            ddlCaracteristicas.DataValueField = "Id";
+            ddlCaracteristicas.DataBind();
+        }
+
+        protected void ddlCaracteristicas_OnSelectedIndexChanged(object sender, EventArgs e)
+        {
+            if (ddlCaracteristicas.SelectedValue.Equals("0"))
+            {
+                lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)Session["DataE"]);
+            }
+            else
+            {
+                lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)Session["DataE"])
+                .OrderByDescending(x => x.BR_Avaliacao_Estabelecimento
+                    .Where(y => y.Id_Caracteristica == Convert.ToInt32(ddlCaracteristicas.SelectedValue))
+                    .DefaultIfEmpty(new BR_Avaliacao_Estabelecimento() { Nota = 0 })
+                    .Average(y => y.Nota)).ToList();
+            }
+
+            CarregaEstabelecimentosComFiltros();
+
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
     }
 }

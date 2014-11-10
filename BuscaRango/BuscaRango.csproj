@@ -187,7 +187,6 @@
     <Content Include="images\Rating\rating_grey_star.gif" />
     <Content Include="images\Rating\rating_red_star.gif" />
     <Content Include="images\Rating\rating_yellow_star.gif" />
-    <Content Include="images\Rating\star-rating.png" />
     <Content Include="images\slider-img-1.jpg" />
     <Content Include="images\slider-img-2.jpg" />
     <Content Include="images\slider-img-3.jpg" />

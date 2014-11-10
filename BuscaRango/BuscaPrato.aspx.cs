@@ -32,6 +32,7 @@ namespace BuscaRango
                     CarregaPratosFiltrados();
                     Session["Data"] = LstPratos;
                     CarregaTags();
+                    CarregaCaracterirticas();
                 }
                 else
                 {
@@ -58,7 +59,7 @@ namespace BuscaRango
         {
             if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
             {
-                CarregaCaracterirticas();
+                
                 var prato = (BR_Prato)e.Item.DataItem;
                 var nome = (Label)e.Item.FindControl("lblNome");
                 var estabelecimento = (HyperLink)e.Item.FindControl("hplEstab");
@@ -190,6 +191,7 @@ namespace BuscaRango
             chkTags.DataValueField = "Id";
             chkTags.DataBind();
         }
+
         protected void ddlBuscaOrdenada_OnLoad(object sender, EventArgs e)
         {
             if (!Page.IsPostBack)
