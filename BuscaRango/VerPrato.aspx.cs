@@ -25,7 +25,7 @@ namespace BuscaRango
                 var prato = PratoService.SelectById(Id);
                 if (prato.Sucesso && prato != null)
                 {
-                    CarregaCaracterirticas();
+                    CarregaCaracteristicas();
                     DetalhesPrato = ((BR_Prato)(prato.RetObj));
                     hplEstab.Text = DetalhesPrato.BR_Estabelecimento.Razao_Social;
                     hplEstab.NavigateUrl = "~/VerEstabelecimento/" + DetalhesPrato.BR_Estabelecimento.Id;
@@ -35,6 +35,7 @@ namespace BuscaRango
                     lblPreco.Text = "R$ " + DetalhesPrato.Preco;
                     litTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
                     CarregaAvaliacoes();
+                    CarregaComentarios();
                 }
                 else
                 {
@@ -64,7 +65,21 @@ namespace BuscaRango
 
         }
 
-        private void CarregaCaracterirticas()
+        protected void rptComentario_OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            var coment = (BR_Comentario_Prato) e.Item.DataItem;
+
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var lblNomeComentario = (Label) e.Item.FindControl("lblNomeComentario");
+                var lblDescComentario = (Label) e.Item.FindControl("lblDescComentario");
+
+                lblNomeComentario.Text = coment.BR_Usuario.Nome;
+                lblDescComentario.Text = coment.Comentario;
+            }
+        }
+
+        private void CarregaCaracteristicas()
         {
             List<BR_Caracteristica_Prato> lst = new List<BR_Caracteristica_Prato>();
             lst.Add(new BR_Caracteristica_Prato() { Id = 0, Caracteristica = "= Selecione =" });
@@ -79,10 +94,16 @@ namespace BuscaRango
 
         private void CarregaAvaliacoes()
         {
-            // Faltou dar um DataBind() no Repeater
             var caracteristicas = (List<BR_Caracteristica_Prato>)CaracteristicaPratoService.SelectAll().RetObj;
             rptCaracteristica.DataSource = caracteristicas;
             rptCaracteristica.DataBind();
+        }
+
+        private void CarregaComentarios()
+        {
+            var comentarios = (List<BR_Comentario_Prato>)ComentarioPratoService.SelectById(Id).RetObj;
+            rptComentario.DataSource = comentarios;
+            rptComentario.DataBind();
         }
 
         protected void RaterAvaliacaoUsuario_Command(object sender, CommandEventArgs e)
@@ -107,5 +128,19 @@ namespace BuscaRango
             CarregaAvaliacoes();
         }
 
+
+        protected void btnComentar_OnClick(object sender, EventArgs e)
+        {
+            var obj = new BR_Comentario_Prato();
+            Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
+
+            obj.Id_Usuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
+            obj.Id_Prato = Id;
+            obj.Comentario = txtComentar.Text;
+
+            ComentarioPratoService.Insert(obj);
+
+            CarregaComentarios();
+        }
     }
 }

@@ -44,6 +44,37 @@
                     </ul>
                 </div>
                 <div class="sidebar_container">
+                    <h3>Comentários</h3>
+                    <asp:UpdatePanel ID="udpComentario" runat="server">
+                        <ContentTemplate>
+                            <div class="text-container">
+                                <ul>
+                                    <asp:Repeater ID="rptComentario" runat="server" OnItemDataBound="rptComentario_OnItemDataBound">
+                                        <ItemTemplate>
+                                            <li>
+                                                <asp:Label ID="lblNomeComentario" runat="server" Text="Label"></asp:Label>
+                                            </li>
+                                            <li>
+                                                <asp:Label ID="lblDescComentario" runat="server" Text="Label"></asp:Label>
+                                            </li>
+                                            <hr />
+                                        </ItemTemplate>
+                                    </asp:Repeater>
+                                    <li>
+                                        <asp:Label ID="lblComentar" Text="Insira seu comentário:" runat="server"></asp:Label>
+                                    </li>
+                                    <li>
+                                        <asp:TextBox ID="txtComentar" runat="server" MaxLength="200" Height="40"></asp:TextBox>
+                                    </li>
+                                    <li>
+                                        <asp:Button ID="btnComentar" runat="server" Text="Comentar" OnClick="btnComentar_OnClick" />
+                                    </li>
+                                </ul>
+                            </div>
+                        </ContentTemplate>
+                    </asp:UpdatePanel>
+                </div>
+                <div class="sidebar_container">
                     <h3>Avaliações</h3>
                     <asp:UpdatePanel ID="udpAvaliacao" runat="server">
                         <ContentTemplate>
@@ -52,7 +83,6 @@
                                     <asp:Repeater ID="rptCaracteristica" runat="server" OnItemDataBound="rptCaracteristica_ItemDataBound">
                                         <ItemTemplate>
                                             <li>
-                                                <%--<%# Container.DataItem %>--%>
                                                 <asp:Label ID="lblCaracteristica" runat="server" Text="Label"></asp:Label>
                                             </li>
                                             <li>

@@ -12,3 +12,16 @@ C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\Bus
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\ASPnetRater.dll
 C:\Users\SimorWork\Documents\BitBucket\SENAC\BuscaRango\BuscaRango\bin\ASPnetRater.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.csprojResolveAssemblyReference.cache
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.dll
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\obj\Debug\BuscaRango.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRango.dll.config
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRango.dll
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRango.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRangoCode.dll
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.dll
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.dll
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\BuscaRangoCode.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\ASPnetRater.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.xml
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRango\bin\EntityFramework.SqlServer.xml

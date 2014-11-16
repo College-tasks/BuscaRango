@@ -159,6 +159,7 @@
     <Compile Include="Service\AvaliacaoEstabelecimentoService.cs" />
     <Compile Include="Service\AvaliacaoPratoService.cs" />
     <Compile Include="Service\CaracteristicaEstabelecimentoService.cs" />
+    <Compile Include="Service\ComentarioPratoService.cs" />
     <Compile Include="Service\CaracteristicaPratoService.cs" />
     <Compile Include="Service\EstabelecimentoService.cs" />
     <Compile Include="Service\PratoService.cs" />

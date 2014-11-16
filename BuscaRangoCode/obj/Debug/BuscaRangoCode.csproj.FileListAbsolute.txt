@@ -26,3 +26,4 @@ C:\Users\Vinicius\Documents\GitHub\BuscaRango\BuscaRangoCode\bin\Debug\EntityFra
 C:\Users\Vinicius\Documents\GitHub\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.xml
 C:\Users\Vinicius\Documents\GitHub\BuscaRango\BuscaRangoCode\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\Vinicius\Documents\GitHub\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.pdb
+C:\Users\Jackson\Documents\GitHub\BuscaRango\BuscaRangoCode\obj\Debug\BuscaRangoCode.csprojResolveAssemblyReference.cache
