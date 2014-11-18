@@ -528,6 +528,17 @@ ul.foodmenu li span.menu_item_price {
 	padding: 10px 20px;
 	width: auto !important;
 }
+
+.submit {
+    background-color: #339933 !important;
+	border: medium none !important;
+	color: #FFFFFF !important;
+	cursor: pointer !important;
+	height: auto;
+	padding: 10px 20px !important;
+
+}
+
 #contact-form div #contact_submit:hover, #contact-form #reset:hover, #submit:hover  {
 	background-color: #000 !important;
 	color: #fff !important;

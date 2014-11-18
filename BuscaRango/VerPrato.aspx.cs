@@ -131,16 +131,21 @@ namespace BuscaRango
 
         protected void btnComentar_OnClick(object sender, EventArgs e)
         {
-            var obj = new BR_Comentario_Prato();
-            Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
+            if (txtComentar.Text != String.Empty)
+            {
+                var obj = new BR_Comentario_Prato();
+                Int32.TryParse(Page.RouteData.Values["idPrato"].ToString(), out Id);
 
-            obj.Id_Usuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
-            obj.Id_Prato = Id;
-            obj.Comentario = txtComentar.Text;
+                obj.Id_Usuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
+                obj.Id_Prato = Id;
+                obj.Comentario = txtComentar.Text;
 
-            ComentarioPratoService.Insert(obj);
+                ComentarioPratoService.Insert(obj);
 
-            CarregaComentarios();
+                txtComentar.Text = "";
+
+                CarregaComentarios();
+            }
         }
     }
 }

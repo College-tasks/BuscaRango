@@ -44,30 +44,23 @@
                     </ul>
                 </div>
                 <div class="sidebar_container">
-                    <h3>Comentários</h3>
-                    <asp:UpdatePanel ID="udpComentario" runat="server">
+                    <h3>Avalie este prato!</h3>
+                    <asp:UpdatePanel ID="udpAvaliacaoUsuario" runat="server">
                         <ContentTemplate>
                             <div class="text-container">
                                 <ul>
-                                    <asp:Repeater ID="rptComentario" runat="server" OnItemDataBound="rptComentario_OnItemDataBound">
-                                        <ItemTemplate>
-                                            <li>
-                                                <asp:Label ID="lblNomeComentario" runat="server" Text="Label"></asp:Label>
-                                            </li>
-                                            <li>
-                                                <asp:Label ID="lblDescComentario" runat="server" Text="Label"></asp:Label>
-                                            </li>
-                                            <hr />
-                                        </ItemTemplate>
-                                    </asp:Repeater>
                                     <li>
-                                        <asp:Label ID="lblComentar" Text="Insira seu comentário:" runat="server"></asp:Label>
+                                        <asp:DropDownList ID="ddlCaracteristicasUsuario" CssClass="" runat="server"></asp:DropDownList>
                                     </li>
                                     <li>
-                                        <asp:TextBox ID="txtComentar" runat="server" MaxLength="200" Height="40"></asp:TextBox>
+                                        <!-- Rating -->
+                                        <cc1:Rater ID="rtrAvaliacaoUsuario" runat="server" Value='0' MaxValue="5" ToolTip="Avalie!"
+                                            ImageOff="~/images/Rating/rating_grey_star.gif" ImageOn="~/images/Rating/rating_red_star.gif"
+                                            ImageOver="~/images/Rating/rating_yellow_star.gif" CommandName='EditItem' OnCommand="RaterAvaliacaoUsuario_Command"></cc1:Rater>
                                     </li>
                                     <li>
-                                        <asp:Button ID="btnComentar" runat="server" Text="Comentar" OnClick="btnComentar_OnClick" />
+                                        <!-- Resultado -->
+                                        <asp:Label ID="lblResultado" runat="server" Visible="False" Text=""></asp:Label>
                                     </li>
                                 </ul>
                             </div>
@@ -101,26 +94,42 @@
                     </asp:UpdatePanel>
                 </div>
                 <div class="sidebar_container">
-                    <h3>Avalie este prato!</h3>
-                    <asp:UpdatePanel ID="udpAvaliacaoUsuario" runat="server">
+                    <h3>Comentários</h3>
+                    <asp:UpdatePanel ID="udpComentario" runat="server">
                         <ContentTemplate>
-                            <div class="text-container">
-                                <ul>
-                                    <li>
-                                        <asp:DropDownList ID="ddlCaracteristicasUsuario" CssClass="" runat="server"></asp:DropDownList>
-                                    </li>
-                                    <li>
-                                        <!-- Rating -->
-                                        <cc1:Rater ID="rtrAvaliacaoUsuario" runat="server" Value='0' MaxValue="5" ToolTip="Avalie!"
-                                            ImageOff="~/images/Rating/rating_grey_star.gif" ImageOn="~/images/Rating/rating_red_star.gif"
-                                            ImageOver="~/images/Rating/rating_yellow_star.gif" CommandName='EditItem' OnCommand="RaterAvaliacaoUsuario_Command"></cc1:Rater>
-                                    </li>
-                                    <li>
-                                        <!-- Resultado -->
-                                        <asp:Label ID="lblResultado" runat="server" Visible="False" Text=""></asp:Label>
-                                    </li>
-                                </ul>
-                            </div>
+						<!-- Comentários -->
+							<div class="comments">
+								<asp:Repeater ID="rptComentario" runat="server" OnItemDataBound="rptComentario_OnItemDataBound">
+									<ItemTemplate>
+										<div class="comments-list">
+											<div class="description">
+												<div class="comment-meta">
+													<cite><asp:Label ID="lblNomeComentario" runat="server" Text="Label"></asp:Label></cite>
+												</div>
+												<p>
+													<asp:Label ID="lblDescComentario" runat="server" Text="Label"></asp:Label>
+												</p>
+											</div>
+										</div>
+									</ItemTemplate>
+								</asp:Repeater>
+							</div>
+                            <!-- Fim Comentários -->
+
+                            <!-- Comentar -->
+							<div class="respond_box">
+								<h2>Faça um comentário!</h2>
+								<p class="comment-form-comment">
+									<!-- TextBox para receber o comentário -->
+									<asp:TextBox ID="txtComentar" runat="server" MaxLength="300" Height="40" TextMode="MultiLine" style="width: 97%;"></asp:TextBox>
+								</p>
+								<p class="form-submit">
+									<!-- Botão para enviar o comentário -->
+									<asp:Button ID="btnComentar" runat="server" Text="Comentar" CssClass="submit" OnClick="btnComentar_OnClick" />
+								</p>
+							</div> 
+							<!-- Fim Comentar -->
+							
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
