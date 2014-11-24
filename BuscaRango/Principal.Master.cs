@@ -17,7 +17,15 @@ namespace BuscaRango
         /// <param name="e"></param>
         protected void Page_Load(object sender, EventArgs e)
         {
-            lblUser.Text = Context.User.Identity.Name;
+            if (String.IsNullOrEmpty(Context.User.Identity.Name))
+            {
+                btnLogin.Text = "Logar";
+            }
+            else
+            {
+                lblUser.Text = "Olá, " + Context.User.Identity.Name + " - ";
+                btnLogout.Text = "Sair";
+            }
         }
 
         /// <summary>
@@ -29,6 +37,16 @@ namespace BuscaRango
         {
             FormsAuthentication.SignOut();
             Response.Redirect("~/Home");
+        }
+
+        /// <summary>
+        /// Login
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        protected void btnLogin_Click(object sender, EventArgs e)
+        {
+            Response.Redirect("~/Login");
         }
     }
 }

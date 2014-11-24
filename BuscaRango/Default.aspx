@@ -10,16 +10,12 @@
         <!--Drop Cap Start-->
         <div class="dropcap">
             <div class="one-third">
-                <a href="#"><i class="fa fa-coffee"></i></a>
-                <h4>COFFEE</h4>
-            </div>
-            <div class="one-third">
                 <a href="#"><i class="fa fa-cutlery"></i></a>
-                <h4>DISHES</h4>
+                <h4>Estabelecimentos</h4>
             </div>
             <div class="one-third-last">
                 <a href="#"><i class="fa fa-glass"></i></a>
-                <h4>DRINKS</h4>
+                <h4>Pratos</h4>
             </div>
         </div>
         <!--Drop Cap End-->

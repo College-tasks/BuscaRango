@@ -121,22 +121,22 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Literal litWifi;
         
         /// <summary>
-        /// udpAvaliacao control.
+        /// lblLat control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel udpAvaliacao;
+        protected global::System.Web.UI.WebControls.Label lblLat;
         
         /// <summary>
-        /// rptCaracteristica control.
+        /// lblLog control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCaracteristica;
+        protected global::System.Web.UI.WebControls.Label lblLog;
         
         /// <summary>
         /// udpAvaliacaoUsuario control.
@@ -173,6 +173,60 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Label lblResultado;
+        
+        /// <summary>
+        /// udpAvaliacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpAvaliacao;
+        
+        /// <summary>
+        /// rptCaracteristica control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCaracteristica;
+        
+        /// <summary>
+        /// udpComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpComentario;
+        
+        /// <summary>
+        /// rptComentario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptComentario;
+        
+        /// <summary>
+        /// txtComentar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtComentar;
+        
+        /// <summary>
+        /// btnComentar control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnComentar;
         
         /// <summary>
         /// rptDados control.

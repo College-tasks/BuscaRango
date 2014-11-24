@@ -42,8 +42,11 @@ namespace BuscaRango
 
                     rptDados.DataSource = DetalhesEstab.BR_Prato;
                     rptDados.DataBind();
-
                     CarregaAvaliacoes();
+                    CarregaComentarios();
+                    //CarregarMapa(DetalhesEstab.Endereco.ToString());
+
+                    
                 }
                 else
                 {
@@ -79,6 +82,22 @@ namespace BuscaRango
             }
         }
 
+        //Comentários
+        protected void rptComentario_OnItemDataBound(object sender, RepeaterItemEventArgs e)
+        {
+            var coment = (BR_Comentario_Estabelecimento)e.Item.DataItem;
+
+            if (e.Item.ItemType == ListItemType.Item || e.Item.ItemType == ListItemType.AlternatingItem)
+            {
+                var lblNomeComentario = (Label)e.Item.FindControl("lblNomeComentario");
+                var lblDescComentario = (Label)e.Item.FindControl("lblDescComentario");
+
+                lblNomeComentario.Text = coment.BR_Usuario.Nome;
+                lblDescComentario.Text = coment.Comentario;
+            }
+        }
+
+
         // Características
         protected void rptCaracteristica_ItemDataBound(object sender, RepeaterItemEventArgs e)
         {
@@ -98,8 +117,48 @@ namespace BuscaRango
                 lblNota.Text = "Média:" + valor.ToString("0.##");
 
             }
+        }
+
+        protected void btnBuscarMapa_Click(object sender, EventArgs e)
+        {
 
         }
+
+        private void CarregarMapa(string endereco)
+        {
+            GoogleService google = new GoogleService();
+            //Buscar latitude e longitude para montar o mapa conforme endereço de cada estabelecimento.
+            google.PegarLatitudeLongitude(endereco);
+            //Chamar a montagem do mapa
+
+        }
+
+        private void CarregaComentarios()
+        {
+            var comentarios = (List<BR_Comentario_Estabelecimento>)ComentariosEstabelecimentosService.SelectById(Id).RetObj;
+            rptComentario.DataSource = comentarios;
+            rptComentario.DataBind();
+        }
+        protected void btnComentar_OnClick(object sender, EventArgs e)
+        {
+            if (txtComentar.Text != String.Empty)
+            {
+                var obj = new BR_Comentario_Estabelecimento();
+                Int32.TryParse(Page.RouteData.Values["idEstabelecimento"].ToString(), out Id);
+
+                obj.Id_Usuario = ((BR_Usuario)UsuarioService.SelectIdByName(Context.User.Identity.Name).RetObj).Id;
+                obj.Id_Estabelecimento = Id;
+                obj.Comentario = txtComentar.Text;
+
+                ComentariosEstabelecimentosService.Insert(obj);
+
+                txtComentar.Text = "";
+
+                CarregaComentarios();
+            }
+        }
+
+
 
         private void CarregaCaracterirticas()
         {
@@ -142,6 +201,7 @@ namespace BuscaRango
 
             rtrAvaliacaoUsuario.Value = 0;
             CarregaAvaliacoes();
+
         }
     }
 }
