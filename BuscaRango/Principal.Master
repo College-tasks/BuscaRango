@@ -1,4 +1,4 @@
-﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="BuscaRango.Principal" %>
+<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Principal.master.cs" Inherits="BuscaRango.Principal" %>
 
 <!DOCTYPE html>
 
@@ -7,7 +7,7 @@
     <asp:ContentPlaceHolder ID="cphHead" runat="server">
     </asp:ContentPlaceHolder>
 
-    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" />
 
     <link rel="stylesheet" type="text/css" href="~/css/reset.css" />
@@ -47,7 +47,7 @@
         <div id="logout">
             <asp:Label ID="lblUser" runat="server" Text="" Font-Bold="True"></asp:Label>
             <asp:LinkButton ID="btnLogout" runat="server" OnClick="btnLogout_Click"></asp:LinkButton>
-            <asp:LinkButton ID="btnLogin" runat="server" OnClick="btnLogin_Click"></asp:LinkButton>
+            <asp:LinkButton ID="btnLogin" runat="server" OnClick="btnLogin_Click" Font-Size="Medium"></asp:LinkButton>
         </div>
 
         <!--Control Bar Start-->

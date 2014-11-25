@@ -36,6 +36,13 @@ namespace BuscaRango
                     litTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
                     CarregaAvaliacoes();
                     CarregaComentarios();
+
+                    if (String.IsNullOrEmpty(Context.User.Identity.Name))
+                    {
+                        ddlCaracteristicasUsuario.Enabled = false;
+                        btnComentar.Enabled = false;
+                        btnComentar.Text = "Logue-se para comentar!";
+                    }
                 }
                 else
                 {

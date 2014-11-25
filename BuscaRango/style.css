@@ -42,7 +42,13 @@ iframe {
 a {
 	outline:none;
 	text-decoration:none;
+    color: #393;
 	font-family: 'Viga', sans-serif;
+}
+
+a:visited {
+    text-decoration: none !important;
+    color: #393;
 }
 
 h1, h2, h3, h4, h5 {

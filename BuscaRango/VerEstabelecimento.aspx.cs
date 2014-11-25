@@ -46,6 +46,12 @@ namespace BuscaRango
                     CarregaComentarios();
                     //CarregarMapa(DetalhesEstab.Endereco.ToString());
 
+                    if (String.IsNullOrEmpty(Context.User.Identity.Name))
+                    {
+                        ddlCaracteristicasUsuario.Enabled = false;
+                        btnComentar.Enabled = false;
+                        btnComentar.Text = "Logue-se para comentar!";
+                    }
                     
                 }
                 else
