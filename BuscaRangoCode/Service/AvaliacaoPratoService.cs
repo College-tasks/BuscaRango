@@ -88,7 +88,9 @@ namespace BuscaRangoCode
                 try
                 {
                     // Recupera todos objetos do grupo
-                    var obj = ctx.BR_Avaliacao_Prato;
+                    var obj = ctx.BR_Avaliacao_Prato
+                        .Include(x => x.BR_Prato)
+                        .Include(x => x.BR_Caracteristica_Prato);
                     ret.RetObj = obj.ToList();
                 }
                 catch (Exception ex)

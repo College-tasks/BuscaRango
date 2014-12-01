@@ -1,0 +1,72 @@
+﻿.meio {
+    width: 80% !important;
+    background-color: #fff;
+    margin: 0px auto;
+    padding: 5px 0;
+}
+
+.usuario {
+    width: 100%;
+    text-align: center;
+    font-size: 25px;
+    font-weight: bold;
+    margin-top: 5px;
+    color: #000;
+}
+
+.pratos {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #000;
+}
+
+.lugares {
+    width: 100%;
+    text-align: center;
+    font-size: 18px;
+    margin-top: 5px;
+    color: #000;
+}
+
+.wrapper-btn-historico {
+    width: 60%;
+    margin: 0 auto;
+}
+
+.btn-historico {
+    width: 100%;
+    height: 50px;
+    background-color: #339933;
+    color: #fff;
+    font-size: 20px;
+}
+
+.disabled {
+    background-color: #ccc !important;
+}
+
+.repeater {
+    width: 80%;
+    background-color: #fff;
+    margin: 10px auto;
+}
+
+.item-historico {
+    width: 100%;
+    float: left;
+    margin-top: 5px;
+}
+
+.item-img {    
+    width: 100px;
+    height: 100px;
+    float: left;
+    margin-right: 5px;
+}
+
+.texto {
+    float: left;
+    color: #000 !important;
+}

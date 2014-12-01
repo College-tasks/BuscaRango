@@ -75,6 +75,7 @@
     <Content Include="BuscaEstabelecimento.aspx" />
     <Content Include="BuscaPrato.aspx" />
     <Content Include="css\blog.css" />
+    <Content Include="css\buscarango.css" />
     <Content Include="css\font-awesome.css" />
     <Content Include="css\Isotope.css" />
     <Content Include="css\jquery.bxslider.css" />
