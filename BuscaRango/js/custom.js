@@ -33,7 +33,7 @@ $(window).load(function(){
 	});
 	});
 	$("#filter ul li a").removeClass('active');
-	$("#filter ul li."+tempvar+ " a").addClass('active');
+	$("#filter ul li." + tempvar + " a").addClass('active');
 	});
 }
 
@@ -52,7 +52,8 @@ $('.item-container').hover(function(){
   $(this).find('img').fadeTo(500,1);
   $(this).find('a.link_to_image, a.link_to_video').css({'left':'50','display':'block'}).stop().animate({'left':'-30%',opacity:0},600);
     $(this).find('a.dragable-slider, a.link_to_video').css({'left':'50','display':'block'}).stop().animate({'left':'-30%',opacity:0},600);
-  $(this).find('a.link_to_post').css({'right':'50px','display':'block'}).stop().animate({'right':'-30%',opacity:0},600);
+    $(this).find('a.link_to_post').css({ 'right': '50px', 'display': 'block' }).stop().animate({ 'right': '-30%', opacity: 0 }, 600);
+    $(this).find('img').css({ 'opacity': '1' });
 });
 
 	

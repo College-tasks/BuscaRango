@@ -2,23 +2,6 @@
 
 <asp:Content ID="Content1" ContentPlaceHolderID="cphHead" runat="server">
     <title>Busca Rango | Busca de Pratos</title>
-    <script>
-        function item_hover() {
-            $('.item-container').hover(function () {
-                $(this).find('img').fadeTo(500, 0.6);
-                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '30%', opacity: 1 }, 600);
-                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '-50px', 'display': 'block' }).stop().animate({ 'left': '45%', opacity: 1 }, 600);
-
-                $(this).find('a.link_to_post').css({ 'right': '-50px', 'display': 'block' }).stop().animate({ 'right': '30%', opacity: 1 }, 600);
-
-            }, function () {
-                $(this).find('img').fadeTo(500, 1);
-                $(this).find('a.link_to_image, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
-                $(this).find('a.dragable-slider, a.link_to_video').css({ 'left': '50', 'display': 'block' }).stop().animate({ 'left': '-30%', opacity: 0 }, 600);
-                $(this).find('a.link_to_post').css({ 'right': '50px', 'display': 'block' }).stop().animate({ 'right': '-30%', opacity: 0 }, 600);
-            });
-        }
-    </script>
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="cphConteudo" runat="server">
 

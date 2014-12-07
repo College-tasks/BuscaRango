@@ -90,8 +90,6 @@ namespace BuscaRango
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         /// <summary>
@@ -158,7 +156,6 @@ namespace BuscaRango
 
             CarregaPratosFiltrados();
             ResetaCamposBusca();
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverAvancado", "item_hover();", true);
         }
 
         /// <summary>
@@ -203,8 +200,6 @@ namespace BuscaRango
                 ddlBuscaOrdenada.Items.Insert(4, "Nome Z-A");
                 ddlBuscaOrdenada.SelectedIndex = 0;
             }
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         protected void ddlBuscaOrdenada_OnSelectedIndexChanged(object sender, EventArgs e)
@@ -240,8 +235,6 @@ namespace BuscaRango
             }
 
             CarregaPratosFiltrados();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         private void CarregaCaracterirticas()
@@ -272,8 +265,6 @@ namespace BuscaRango
             }
 
             CarregaPratosFiltrados();
-
-            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
     }
 }
