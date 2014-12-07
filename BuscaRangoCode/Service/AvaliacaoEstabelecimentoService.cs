@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace BuscaRangoCode
 {
@@ -88,7 +89,9 @@ namespace BuscaRangoCode
                 try
                 {
                     // Recupera todos objetos do grupo
-                    var obj = ctx.BR_Avaliacao_Estabelecimento;
+                    var obj = ctx.BR_Avaliacao_Estabelecimento
+                        .Include(x => x.BR_Caracteristica_Estabelecimento)
+                        .Include(x => x.BR_Estabelecimento.BR_Fotos_Estabelecimento);
                     ret.RetObj = obj.ToList();
                 }
                 catch (Exception ex)

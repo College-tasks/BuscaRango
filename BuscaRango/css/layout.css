@@ -59,10 +59,12 @@
 	width:30.80%;
 	float:right;
 	margin-bottom:20px;
+    padding-top: 10px;
 }
 .two-third {
 	width:65.40%;
 	float:left;
+    padding-top: 10px;
 }
 .two-third-last {
 	width:65.40%;

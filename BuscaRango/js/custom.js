@@ -63,7 +63,7 @@ $('.item-container').hover(function(){
     $("<option />", {
     "selected": "selected",
     "value"   : "",
-    "text"    : "Go to..."
+    "text"    : "Ir para..."
     }).appendTo(".menu select");
 
   // Populate dropdowns with the first menu items
