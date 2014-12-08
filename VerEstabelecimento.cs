@@ -1,4 +1,4 @@
-﻿using ASPnetRater;
+using ASPnetRater;
 using BuscaRangoCode;
 using System;
 using System.Collections.Generic;
@@ -44,18 +44,18 @@ namespace BuscaRango
                     imgwifi.Visible = (DetalhesEstab.Tem_Wifi == true ? true : false);
                     imgEstac.Visible = (DetalhesEstab.Tem_Estacionamento == true ? true : false);
                     imgdeficientes.Visible = (DetalhesEstab.Tem_Acesso_Deficiente == true ? true : false);
-                    imgfraldario.Visible = (DetalhesEstab.Tem_Fraldario == true ? true : false);
+                    imgfraldario.Visible =(DetalhesEstab.Tem_Fraldario == true? true: false);
                     imgreserva.Visible = (DetalhesEstab.Tem_Reserva == true ? true : false);
                     imgespacokids.Visible = (DetalhesEstab.Tem_Espaco_Kids == true ? true : false);
                     imgmusica.Visible = (DetalhesEstab.Tem_Musica == true ? true : false);
                     imgcustomizacao.Visible = (DetalhesEstab.Tem_Customizacao == true ? true : false);
-                    imgChamaGar.Visible = (DetalhesEstab.Tem_Chamada_Garcom == true ? true : false);
-
+                    imgChamaGar.Visible= (DetalhesEstab.Tem_Chamada_Garcom == true ? true : false);
+                    
                     rptDados.DataSource = DetalhesEstab.BR_Prato;
                     rptDados.DataBind();
                     CarregaAvaliacoes();
                     CarregaComentarios();
-                    ScriptManager.RegisterStartupScript(this, this.GetType(), "", "IniciaMapa(" + DetalhesEstab.Latitude + "," + DetalhesEstab.Longitude + ");", true);
+                    ScriptManager.RegisterStartupScript(this, this.GetType(), "","IniciaMapa(" + DetalhesEstab.Latitude + "," + DetalhesEstab.Longitude + ");", true);
                 }
                 else
                 {

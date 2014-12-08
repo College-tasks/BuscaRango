@@ -22,6 +22,24 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Panel pnlSemLogin;
         
         /// <summary>
+        /// linkEstab control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkEstab;
+        
+        /// <summary>
+        /// linkPrato control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.HyperLink linkPrato;
+        
+        /// <summary>
         /// pnlLogin control.
         /// </summary>
         /// <remarks>

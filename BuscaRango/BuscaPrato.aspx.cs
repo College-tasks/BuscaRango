@@ -90,6 +90,8 @@ namespace BuscaRango
                     .Contains(txtBusca.Text.ToUpper()))
                     .ToList();
             CarregaPratosFiltrados();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
+
         }
 
         /// <summary>
@@ -156,6 +158,8 @@ namespace BuscaRango
 
             CarregaPratosFiltrados();
             ResetaCamposBusca();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
+
         }
 
         /// <summary>
@@ -235,6 +239,8 @@ namespace BuscaRango
             }
 
             CarregaPratosFiltrados();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
+
         }
 
         private void CarregaCaracterirticas()
@@ -265,6 +271,8 @@ namespace BuscaRango
             }
 
             CarregaPratosFiltrados();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
+
         }
     }
 }

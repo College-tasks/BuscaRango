@@ -39,7 +39,7 @@
                     <h3>Características</h3>
                     <ul>
                         <li>
-                            <asp:Literal ID="litTeleEntrega" runat="server"></asp:Literal>
+                            <asp:Image ID="imgTele" ImageUrl="~/images/Imagens_VerEstabelecimento/reserva_cel.png" runat="server" />
                         </li>
                     </ul>
                 </div>
@@ -93,7 +93,12 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
-                <div class="sidebar_container">
+                
+                <div class="clear"></div>
+                
+            </div>
+            <div class="clear"></div>
+            <div class="sidebar_container">
                     <h3>Comentários</h3>
                     <asp:UpdatePanel ID="udpComentario" runat="server">
                         <ContentTemplate>
@@ -133,8 +138,6 @@
                         </ContentTemplate>
                     </asp:UpdatePanel>
                 </div>
-                <div class="clear"></div>
-            </div>
         </section>
     </section>
     <!--Container End-->

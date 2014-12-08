@@ -1,4 +1,4 @@
-﻿<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="VerEstabelecimento.aspx.cs" Inherits="BuscaRango.VerEstabelecimento" %>
+<%@ Page Title="" Language="C#" MasterPageFile="~/Principal.Master" AutoEventWireup="true" CodeBehind="VerEstabelecimento.aspx.cs" Inherits="BuscaRango.VerEstabelecimento" %>
 
 <%@ Register Namespace="ASPnetRater" Assembly="ASPnetRater" TagPrefix="cc1" %>
 
@@ -224,7 +224,7 @@
                 </asp:UpdatePanel>
             </div>
             <div class="clear"></div>
-            
+            </div>
         </section>
     </section>
     <!--Container End-->

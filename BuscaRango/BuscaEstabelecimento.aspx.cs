@@ -91,6 +91,7 @@ namespace BuscaRango
             lstEstabelecimentosFiltrados = ((List<BR_Estabelecimento>)
             Session["DataE"]).Where(x => x.Razao_Social.ToUpper().Contains(txtBusca.Text.ToUpper())).ToList();
             CarregaEstabelecimentos();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
 
         }
 
@@ -195,6 +196,7 @@ namespace BuscaRango
             }
 
             CarregaEstabelecimentosComFiltros();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
 
         /// <summary>
@@ -271,6 +273,7 @@ namespace BuscaRango
             }
 
             CarregaEstabelecimentosComFiltros();
+            ScriptManager.RegisterStartupScript(this, this.GetType(), "hoverSimples", "item_hover();", true);
         }
     }
 }

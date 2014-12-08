@@ -10,11 +10,11 @@
         <!--Drop Cap Start-->
         <asp:Panel ID="pnlSemLogin" runat="server" CssClass="dropcap" Visible="false">
             <div class="one-third">
-                <a href="#"><i class="fa fa-cutlery"></i></a>
+                <asp:HyperLink ID="linkEstab" runat="server" NavigateUrl="~/Lugar"><i class="fa fa-cutlery"></i></asp:HyperLink>
                 <h4>Estabelecimentos</h4>
             </div>
             <div class="one-third-last">
-                <a href="#"><i class="fa fa-glass"></i></a>
+                <asp:HyperLink ID="linkPrato" runat="server" NavigateUrl="~/Prato"><i class="fa fa-glass"></i></asp:HyperLink>
                 <h4>Pratos</h4>
             </div>
         </asp:Panel>

@@ -33,7 +33,10 @@ namespace BuscaRango
                     lblNome.Text = DetalhesPrato.Nome;
                     lblDesc.Text = DetalhesPrato.Descricao;
                     lblPreco.Text = "R$ " + DetalhesPrato.Preco;
-                    litTeleEntrega.Text = DetalhesPrato.Tem_Entrega != true ? "Tele-Entrega: Não" : "Tele-Entrega: Sim";
+
+
+                    imgTele.ToolTip = "Possui Tele-Entrega";
+                    imgTele.Visible = DetalhesPrato.Tem_Entrega ? true : false;
                     CarregaAvaliacoes();
                     CarregaComentarios();
 

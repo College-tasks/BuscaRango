@@ -112,31 +112,103 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Literal litReserva;
         
         /// <summary>
-        /// litWifi control.
+        /// imgChamaGar control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Literal litWifi;
+        protected global::System.Web.UI.WebControls.Image imgChamaGar;
         
         /// <summary>
-        /// lblLat control.
+        /// imgEstac control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLat;
+        protected global::System.Web.UI.WebControls.Image imgEstac;
         
         /// <summary>
-        /// lblLog control.
+        /// imgcustomizacao control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label lblLog;
+        protected global::System.Web.UI.WebControls.Image imgcustomizacao;
+        
+        /// <summary>
+        /// imgwifi control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgwifi;
+        
+        /// <summary>
+        /// imgmusica control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgmusica;
+        
+        /// <summary>
+        /// imgespacokids control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgespacokids;
+        
+        /// <summary>
+        /// imgreserva control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgreserva;
+        
+        /// <summary>
+        /// imgfraldario control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgfraldario;
+        
+        /// <summary>
+        /// imgdeficientes control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Image imgdeficientes;
+        
+        /// <summary>
+        /// udpAvaliacao control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.UpdatePanel udpAvaliacao;
+        
+        /// <summary>
+        /// rptCaracteristica control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Repeater rptCaracteristica;
         
         /// <summary>
         /// udpAvaliacaoUsuario control.
@@ -175,22 +247,13 @@ namespace BuscaRango {
         protected global::System.Web.UI.WebControls.Label lblResultado;
         
         /// <summary>
-        /// udpAvaliacao control.
+        /// rptDados control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.UpdatePanel udpAvaliacao;
-        
-        /// <summary>
-        /// rptCaracteristica control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptCaracteristica;
+        protected global::System.Web.UI.WebControls.Repeater rptDados;
         
         /// <summary>
         /// udpComentario control.
@@ -227,14 +290,5 @@ namespace BuscaRango {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.Button btnComentar;
-        
-        /// <summary>
-        /// rptDados control.
-        /// </summary>
-        /// <remarks>
-        /// Auto-generated field.
-        /// To modify move field declaration from designer file to code-behind file.
-        /// </remarks>
-        protected global::System.Web.UI.WebControls.Repeater rptDados;
     }
 }
